@@ -1,0 +1,18 @@
+{
+  "version": "0.1.0",
+  "name": "@validarium/intl",
+  "license": "MIT",
+  "main": "src/index.js",
+  "description": "Validation functions that return valid Intl messages.",
+  "contributors": [
+    "Tomas Konrady <tomas.konrady@lundegaard.eu>",
+    "Vaclav Jancarik <vaclav.jancarik@lundegaard.eu>",
+    "Kristina Kamenicka <kristina.kamenicka@lundegaard.eu>"
+  ],
+  "dependencies": {
+    "@validarium/core": "0.1.0",
+    "@validarium/predicates": "0.1.0",
+    "ramda": "^0.26.0",
+    "ramda-extension": "^0.7.1"
+  }
+}

@@ -1,0 +1,36 @@
+*.log
+coverage
+stats.js
+node_modules/
+build/
+.cache/
+.eslintcache
+
+### Vim ###
+# Swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# Session
+Session.vim
+
+# Temporary
+.netrwhist
+*~
+# Auto-generated tag files
+tags
+# Persistent undo
+[._]*.un~
+# Exclude IDE project folders
+.idea
+*.sublime-project
+*.sublime-workspace
+jsconfig.json
+.history
+
+# OS files
+.DS_STORE
+
