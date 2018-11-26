@@ -1,0 +1,18 @@
+{
+  "version": "0.1.0",
+  "name": "@validarium/predicates",
+  "license": "MIT",
+  "main": "src/index.js",
+  "description": "Reusable predicates used within @validarium/intl.",
+  "contributors": [
+    "Tomas Konrady <tomas.konrady@lundegaard.eu>",
+    "Vaclav Jancarik <vaclav.jancarik@lundegaard.eu>",
+    "Kristina Kamenicka <kristina.kamenicka@lundegaard.eu>",
+    "Lukas Sulik <lukas.sulik@lundegaard.eu>"
+  ],
+  "dependencies": {
+    "invariant": "^2.2.4",
+    "ramda": "^0.26.0",
+    "ramda-extension": "^0.7.1"
+  }
+}
