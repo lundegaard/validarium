@@ -1,5 +1,5 @@
-import { gte } from 'ramda';
 import createValidation from '@validarium/core/src/createValidation';
+import hasValueMax from '@validarium/predicates/src/hasValueMax';
 import m from './messages';
 
-export default max => createValidation(gte(max), m.hasValueMax, { max });
+export default max => createValidation(hasValueMax(max), m.hasValueMax, { max });
