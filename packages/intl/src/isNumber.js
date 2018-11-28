@@ -1,6 +1,5 @@
-import { isNumeric } from 'ramda-extension';
-
 import createValidation from '@validarium/core/src/createValidation';
+import isNumber from '@validarium/predicates/src/isNumber';
 import m from './messages';
 
-export default createValidation(isNumeric, m.isNumber);
+export default createValidation(isNumber, m.isNumber);

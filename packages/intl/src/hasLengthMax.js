@@ -1,5 +1,5 @@
 import createValidation from '@validarium/core/src/createValidation';
+import hasLengthMax from '@validarium/predicates/src/hasLengthMax';
 import m from './messages';
 
-// TODO: refactor with R_
-export default max => createValidation(value => value.length <= max, m.hasLengthMax, { max });
+export default max => createValidation(hasLengthMax(max), m.hasLengthMax, { max });

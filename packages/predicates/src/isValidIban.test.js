@@ -1,4 +1,4 @@
-import { testIban } from './isValidIban';
+import isValidIban from './isValidIban';
 
 const VALID_IBANS_FOR_EACH_COUNTRY = [
 	'AD6216957769331722469258',
@@ -93,12 +93,12 @@ const INVALID_IBANS = [
 describe('ibanMod97', () => {
 	it('should test iban for each country', () => {
 		VALID_IBANS_FOR_EACH_COUNTRY.forEach(iban => {
-			expect(testIban(iban)).toBeTruthy();
+			expect(isValidIban(iban)).toBeTruthy();
 		});
 	});
 	it('invalid ibans', () => {
 		INVALID_IBANS.forEach(iban => {
-			expect(testIban(iban)).toBeFalsy();
+			expect(isValidIban(iban)).toBeFalsy();
 		});
 	});
 });

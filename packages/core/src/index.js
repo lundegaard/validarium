@@ -1,5 +1,5 @@
-export createMainValidate from './createMainValidate';
-export validate from './validate';
-export validateMany from './validateMany';
-export createValidation from './createValidation';
-export createOptionalValidation from './createOptionalValidation';
+export { default as createMainValidate } from './createMainValidate';
+export { default as validate } from './validate';
+export { default as validateMany } from './validateMany';
+export { default as createValidation } from './createValidation';
+export { default as createOptionalValidation } from './createOptionalValidation';
