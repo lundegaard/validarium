@@ -7,7 +7,7 @@
   "contributors": [
     "Tomas Konrady <tomas.konrady@lundegaard.eu>",
     "Vaclav Jancarik <vaclav.jancarik@lundegaard.eu>",
-    "Kristina Kamenicka <kristina.kamenicka@lundegaard.eu>",
+    "Kristyna Kamenicka <kristyna.kamenicka@lundegaard.eu>",
     "Lukas Sulik <lukas.sulik@lundegaard.eu>"
   ],
   "engines": {
@@ -47,7 +47,8 @@
     "rollup-plugin-commonjs": "^9.2.0",
     "rollup-plugin-node-resolve": "^3.4.0",
     "rollup-plugin-replace": "^2.1.0",
-    "rollup-plugin-terser": "^3.0.0"
+    "rollup-plugin-terser": "^3.0.0",
+    "jsdoc-to-markdown": "^4.0.1"
   },
   "scripts": {
     "publishAll": "yarn build && yarn lerna publish --access public --registry https://registry.npmjs.org/",
@@ -55,7 +56,8 @@
     "lint": "yarn lint:eslint",
     "lint:eslint": "eslint --ext .js ./",
     "build": "lerna exec -- rollup -c=../../rollup.config.js",
-    "prepublish": "yarn build"
+    "prepublish": "yarn build",
+    "generate:docs-intl": "jsdoc2md -t ./packages/intl/docs/intl.hbs --separators ./packages/intl/src/*.js > ./packages/intl/README.md"
   },
   "lint-staged": {
     "linters": {
