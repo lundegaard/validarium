@@ -1,5 +1,7 @@
+/**
+@module intlValidations
+*/
 export { default as messages } from './messages';
-
 export { default as hasLengthInInterval } from './hasLengthInInterval';
 export { default as hasOnlyDigits } from './hasOnlyDigits';
 export { default as hasValueMin } from './hasValueMin';
