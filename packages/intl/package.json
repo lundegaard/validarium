@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.3",
   "name": "@validarium/intl",
   "license": "MIT",
   "main": "lib/validarium-intl.js",
@@ -9,7 +9,7 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
- "sideEffects": false,
+  "sideEffects": false,
   "description": "Validation functions that return valid Intl messages.",
   "contributors": [
     "Tomas Konrady <tomas.konrady@lundegaard.eu>",
@@ -17,8 +17,8 @@
     "Kristyna Kamenicka <kristyna.kamenicka@lundegaard.eu>"
   ],
   "dependencies": {
-    "@validarium/core": "0.1.0",
-    "@validarium/predicates": "0.1.0",
+    "@validarium/core": "^0.2.3",
+    "@validarium/predicates": "^0.2.3",
     "ramda": "^0.26.0",
     "ramda-extension": "^0.7.1"
   }

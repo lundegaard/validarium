@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.3",
   "name": "@validarium/predicates",
   "license": "MIT",
   "main": "lib/validarium-predicates.js",
