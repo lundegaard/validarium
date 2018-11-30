@@ -2,12 +2,18 @@
   "version": "0.1.0",
   "name": "@validarium/intl",
   "license": "MIT",
-  "main": "src/index.js",
+  "main": "lib/validarium-intl.js",
+  "module": "es/validarium-intl.js",
+  "unpkg": "dist/validarium-intl.js",
+  "publishConfig": {
+    "access": "public"
+  },
+ "sideEffects": false,
   "description": "Validation functions that return valid Intl messages.",
   "contributors": [
     "Tomas Konrady <tomas.konrady@lundegaard.eu>",
     "Vaclav Jancarik <vaclav.jancarik@lundegaard.eu>",
-    "Kristina Kamenicka <kristina.kamenicka@lundegaard.eu>"
+    "Kristyna Kamenicka <kristyna.kamenicka@lundegaard.eu>"
   ],
   "dependencies": {
     "@validarium/core": "0.1.0",

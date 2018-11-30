@@ -2,12 +2,15 @@
   "version": "0.1.0",
   "name": "@validarium/predicates",
   "license": "MIT",
-  "main": "src/index.js",
+  "main": "lib/validarium-predicates.js",
+  "module": "es/validarium-predicates.js",
+  "unpkg": "dist/validarium-predicates.js",
+  "sideEffects": false,
   "description": "Reusable predicates used within @validarium/intl.",
   "contributors": [
     "Tomas Konrady <tomas.konrady@lundegaard.eu>",
     "Vaclav Jancarik <vaclav.jancarik@lundegaard.eu>",
-    "Kristina Kamenicka <kristina.kamenicka@lundegaard.eu>",
+    "Kristyna Kamenicka <kristyna.kamenicka@lundegaard.eu>",
     "Lukas Sulik <lukas.sulik@lundegaard.eu>"
   ],
   "dependencies": {
