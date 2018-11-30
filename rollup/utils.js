@@ -11,7 +11,7 @@ export const getGlobalName = compose(
 
 export const getFileName = compose(
 	join('-'),
-	prepend('validaridum'),
+	prepend('validarium'),
 	map(toKebabCase),
 	tail,
 	split('/')

@@ -2,14 +2,21 @@
   "version": "0.1.0",
   "name": "@validarium/core",
   "license": "MIT",
-  "main": "src/index.js",
+  "main": "lib/validarium-core.js",
+  "module": "es/validarium-core.js",
+  "unpkg": "dist/validarium-core.js",
   "description": "Main functionality of @validarium lays here.",
   "contributors": [
     "Tomas Konrady <tomas.konrady@lundegaard.eu>",
     "Vaclav Jancarik <vaclav.jancarik@lundegaard.eu>",
-    "Kristina Kamenicka <kristina.kamenicka@lundegaard.eu>",
+    "Kristyna Kamenicka <kristyna.kamenicka@lundegaard.eu>",
     "Lukas Sulik <lukas.sulik@lundegaard.eu>"
   ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "sideEffects": false,
   "dependencies": {
     "invariant": "^2.2.4",
     "ramda": "^0.26.0",
