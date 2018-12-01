@@ -57,7 +57,7 @@
     "lint:eslint": "eslint --ext .js ./",
     "build": "lerna exec -- rollup -c=../../rollup.config.js",
     "prepublish": "yarn build",
-    "generate:docs-intl": "jsdoc2md -t ./packages/intl/docs/intl.hbs --separators ./packages/intl/src/*.js > ./packages/intl/README.md"
+    "generate:docs": "jsdoc2md -t ./packages/intl/scripts/docs.hbs --separators ./packages/intl/src/*.js > ./packages/intl/README.md"
   },
   "lint-staged": {
     "linters": {
