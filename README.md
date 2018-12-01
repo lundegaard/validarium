@@ -1,4 +1,5 @@
 # Validarium
+[![build status](https://img.shields.io/travis/lundegaard/validarium/master.svg?style=flat-square)](https://travis-ci.org/lundegaard/validarium)
 
 Agnostic validation library for JavaScript applications.
 
