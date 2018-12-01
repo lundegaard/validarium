@@ -1,0 +1,6 @@
+nguage: node_js
+node_js: # uses nodejs version defined in `.nvmrc`
+sudo: false
+script:
+  - npm run lint
+  - npm run test
