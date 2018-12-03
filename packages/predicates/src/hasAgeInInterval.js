@@ -2,7 +2,7 @@ import { o } from 'ramda';
 import { between } from 'ramda-extension';
 
 const getAge = dateString => {
-	const today = Date.now();
+	const today = new Date(Date.now());
 	const birthDate = new Date(dateString);
 	const age = today.getFullYear() - birthDate.getFullYear();
 	const monthDifference = today.getMonth() - birthDate.getMonth();
