@@ -1,5 +1,5 @@
 import createValidation from '@validarium/core/src/createValidation';
-import hasValueInInterval from '@validarium/predicates/src/hasValueInInterval';
+import hasAgeInInterval from '@validarium/predicates/src/hasAgeInInterval';
 import m from './messages';
 
 /**
@@ -21,4 +21,4 @@ null
 @alias module:intlValidations.hasAgeInInterval
 */
 export default (minAge, maxAge) =>
-	createValidation(hasValueInInterval(minAge, maxAge), m.hasAgeInInterval, { minAge, maxAge });
+	createValidation(hasAgeInInterval(minAge, maxAge), m.hasAgeInInterval, { minAge, maxAge });
