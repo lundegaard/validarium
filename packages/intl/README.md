@@ -11,6 +11,7 @@ This package contains all validation functions for Intl
     * _number_
         * [.isInteger](#module_intlValidations.isInteger) ⇒ <code>Object</code>
         * [.isPositiveNumber](#module_intlValidations.isPositiveNumber) ⇒ <code>Object</code>
+        * [.hasAgeInInterval(minAge, maxAge)](#module_intlValidations.hasAgeInInterval) ⇒ <code>Object</code>
         * [.hasValueInInterval(min, max)](#module_intlValidations.hasValueInInterval) ⇒ <code>Object</code>
         * [.hasValueMax(max)](#module_intlValidations.hasValueMax) ⇒ <code>Object</code>
         * [.hasValueMin(min)](#module_intlValidations.hasValueMin) ⇒ <code>Object</code>
@@ -69,6 +70,34 @@ null
 {message Object}
 
 > isPositiveNumber(0)
+{message Object}
+```
+
+* * *
+
+<a name="module_intlValidations.hasAgeInInterval"></a>
+
+### intlValidations.hasAgeInInterval(minAge, maxAge) ⇒ <code>Object</code>
+Checks if the age is in specified interval
+
+**Kind**: static method of [<code>intlValidations</code>](#module_intlValidations)  
+**Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
+**Category**: number  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| minAge | <code>number</code> | minimal age |
+| maxAge | <code>number</code> | maximal age |
+
+**Example**  
+```js
+> hasAgeInInterval(1, 3)(2)
+null
+
+> hasAgeInInterval(1, 3)(3)
+null
+
+> hasAgeInInterval(1, 3)(5)
 {message Object}
 ```
 

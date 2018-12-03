@@ -71,4 +71,8 @@ export default {
 		id: 'validarium.isValidIban',
 		defaultMessage: 'IBAN is not valid',
 	},
+	hasAgeInInterval: {
+		id: 'validarium.hasAgeInInterval',
+		defaultMessage: 'You must be between {minAge} and {maxAge} years old',
+	},
 };
