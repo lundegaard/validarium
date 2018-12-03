@@ -20,3 +20,4 @@ export { default as hasNoSpecialSymbols } from './hasNoSpecialSymbols';
 export { default as hasLength } from './hasLength';
 export { default as startsWith } from './startsWith';
 export { default as isValidIban } from './isValidIban';
+export { default as hasAgeInInterval } from './hasAgeInInterval';
