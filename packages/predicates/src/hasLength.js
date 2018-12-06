@@ -1,3 +1,3 @@
-import { useWith, equals, curry, identity, length } from 'ramda';
+import { useWith, equals, identity, length } from 'ramda';
 
-export default curry(useWith(equals, [identity, length]));
+export default useWith(equals, [identity, length]);
