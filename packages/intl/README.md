@@ -10,6 +10,7 @@ This package contains all validation functions for Intl
 * [intlValidations](#module_intlValidations)
     * _number_
         * [.isInteger](#module_intlValidations.isInteger) ⇒ <code>Object</code>
+        * [.isNegativeNumber](#module_intlValidations.isNegativeNumber) ⇒ <code>Object</code>
         * [.isPositiveNumber](#module_intlValidations.isPositiveNumber) ⇒ <code>Object</code>
         * [.hasAgeInInterval(minAge, maxAge)](#module_intlValidations.hasAgeInInterval) ⇒ <code>Object</code>
         * [.hasValueInInterval(min, max)](#module_intlValidations.hasValueInInterval) ⇒ <code>Object</code>
@@ -24,11 +25,17 @@ This package contains all validation functions for Intl
         * [.isEmail](#module_intlValidations.isEmail) ⇒ <code>Object</code>
         * [.isNumber](#module_intlValidations.isNumber) ⇒ <code>Object</code>
         * [.visPhoneNumber](#module_intlValidations.visPhoneNumber) ⇒ <code>Object</code>
+        * [.isString](#module_intlValidations.isString) ⇒ <code>Object</code>
         * [.isValidIban](#module_intlValidations.isValidIban) ⇒ <code>Object</code>
+        * [.matches](#module_intlValidations.matches) ⇒ <code>Object</code>
+        * [.hasDateMax(maximalDate)](#module_intlValidations.hasDateMax) ⇒ <code>Object</code>
+        * [.hasDateMin(maximalDate)](#module_intlValidations.hasDateMin) ⇒ <code>Object</code>
         * [.hasLength(length)](#module_intlValidations.hasLength) ⇒ <code>Object</code>
         * [.hasLengthInInterval(min, max)](#module_intlValidations.hasLengthInInterval) ⇒ <code>Object</code>
         * [.hasLengthMax(max)](#module_intlValidations.hasLengthMax) ⇒ <code>Object</code>
         * [.hasLengthMin(min)](#module_intlValidations.hasLengthMin) ⇒ <code>Object</code>
+        * [.isNumber(list)](#module_intlValidations.isNumber) ⇒ <code>Object</code>
+        * [.isOneOf(list)](#module_intlValidations.isOneOf) ⇒ <code>Object</code>
         * [.startsWith()](#module_intlValidations.startsWith) ⇒ <code>Object</code>
 
 
@@ -53,6 +60,28 @@ null
 
 * * *
 
+<a name="module_intlValidations.isNegativeNumber"></a>
+
+### intlValidations.isNegativeNumber ⇒ <code>Object</code>
+Checks if the value is a negative number
+
+**Kind**: static property of [<code>intlValidations</code>](#module_intlValidations)  
+**Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
+**Category**: number  
+**Example**  
+```js
+> isNegativeNumber(-5)
+null
+
+> isNegativeNumber(5)
+{message Object}
+
+> isNegativeNumber(0)
+{message Object}
+```
+
+* * *
+
 <a name="module_intlValidations.isPositiveNumber"></a>
 
 ### intlValidations.isPositiveNumber ⇒ <code>Object</code>
@@ -66,7 +95,7 @@ Checks if the value is a positive number
 > isPositiveNumber(5)
 null
 
-> isPhoneNumber(-5)
+> isPositiveNumber(-5)
 {message Object}
 
 > isPositiveNumber(0)
@@ -323,6 +352,28 @@ null
 
 * * *
 
+<a name="module_intlValidations.isString"></a>
+
+### intlValidations.isString ⇒ <code>Object</code>
+Checks if value is type of string
+
+**Kind**: static property of [<code>intlValidations</code>](#module_intlValidations)  
+**Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
+**Category**: string  
+**Example**  
+```js
+> isString('abc')
+null
+
+> isString('')
+null
+
+> isString(123)
+{message Object}
+```
+
+* * *
+
 <a name="module_intlValidations.isValidIban"></a>
 
 ### intlValidations.isValidIban ⇒ <code>Object</code>
@@ -337,6 +388,84 @@ Checks if the value is a valid IBAN
 null
 
 > isValidIban('CZ123')
+{message Object}
+```
+
+* * *
+
+<a name="module_intlValidations.matches"></a>
+
+### intlValidations.matches ⇒ <code>Object</code>
+Checks if value matches the given predicate
+
+**Kind**: static property of [<code>intlValidations</code>](#module_intlValidations)  
+**Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
+**Category**: string  
+
+| Type | Description |
+| --- | --- |
+| <code>string</code> | predicate |
+
+**Example**  
+```js
+> matches('/([a-z]a)/g')('banana')
+null
+
+> matches('/([a-z]a)/g')('blueberry')
+{message Object}
+```
+
+* * *
+
+<a name="module_intlValidations.hasDateMax"></a>
+
+### intlValidations.hasDateMax(maximalDate) ⇒ <code>Object</code>
+Checks if the the date is maximally the specified value
+
+**Kind**: static method of [<code>intlValidations</code>](#module_intlValidations)  
+**Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
+**Category**: string  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| maximalDate | <code>string</code> | maximum date |
+
+**Example**  
+```js
+> hasDateMax('2032-07-01')('2020-07-01')
+null
+
+> hasDateMax('2032-07-01')('2032-07-01')
+null
+
+> hasDateMax('2032-07-01')('2032-07-02')
+{message Object}
+```
+
+* * *
+
+<a name="module_intlValidations.hasDateMin"></a>
+
+### intlValidations.hasDateMin(maximalDate) ⇒ <code>Object</code>
+Checks if the the date is minimally the specified value
+
+**Kind**: static method of [<code>intlValidations</code>](#module_intlValidations)  
+**Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
+**Category**: string  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| maximalDate | <code>string</code> | minimal date |
+
+**Example**  
+```js
+> hasDateMin('2032-07-01')('2040-07-01')
+null
+
+> hasDateMin('2032-07-01')('2032-07-01')
+null
+
+> hasDateMin('2032-07-02')('2032-07-01')
 {message Object}
 ```
 
@@ -443,6 +572,54 @@ null
 null
 
 > hasLengthMin(2)('a')
+{message Object}
+```
+
+* * *
+
+<a name="module_intlValidations.isNumber"></a>
+
+### intlValidations.isNumber(list) ⇒ <code>Object</code>
+Checks if the value doesn't equal any list item
+
+**Kind**: static method of [<code>intlValidations</code>](#module_intlValidations)  
+**Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
+**Category**: string  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| list | <code>array</code> | array of values |
+
+**Example**  
+```js
+> isNotOneOf(['apple', 'pineapple', 'banana'])('banana')
+null
+
+> isNotOneOf(['apple', 'pineapple', 'banana'])('blueberry')
+{message Object}
+```
+
+* * *
+
+<a name="module_intlValidations.isOneOf"></a>
+
+### intlValidations.isOneOf(list) ⇒ <code>Object</code>
+Checks if the value equals any list item
+
+**Kind**: static method of [<code>intlValidations</code>](#module_intlValidations)  
+**Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
+**Category**: string  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| list | <code>array</code> | array of values |
+
+**Example**  
+```js
+> isOneOf(['apple', 'pineapple', 'banana'])('banana')
+null
+
+> isOneOf(['apple', 'pineapple', 'banana'])('blueberry')
 {message Object}
 ```
 
