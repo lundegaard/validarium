@@ -1,5 +1,5 @@
 {
-  "version": "0.3.1",
+  "version": "0.3.3",
   "name": "@validarium/intl",
   "license": "MIT",
   "main": "lib/validarium-intl.js",
@@ -18,7 +18,7 @@
   ],
   "dependencies": {
     "@validarium/core": "^0.2.3",
-    "@validarium/predicates": "^0.2.3",
+    "@validarium/predicates": "^0.3.3",
     "ramda": "^0.26.0",
     "ramda-extension": "^0.7.1"
   }
