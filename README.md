@@ -24,7 +24,7 @@ This library provides an easy way how to validate your inputs in JavaScript. It 
   <br />
   <br />
 
-## Instalation
+## Installation
 
 Install desired packages with npm as follows
 
