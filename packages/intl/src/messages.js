@@ -75,4 +75,32 @@ export default {
 		id: 'validarium.hasAgeInInterval',
 		defaultMessage: 'You must be between {minAge} and {maxAge} years old',
 	},
+	isString: {
+		id: 'validarium.isString',
+		defaultMessage: 'The value has to be a character string',
+	},
+	matches: {
+		id: 'validarium.hasAgeInInterval',
+		defaultMessage: 'Value has a wrong format',
+	},
+	isOneOf: {
+		id: 'validarium.isOneOf',
+		defaultMessage: 'Value has to be one of defined.',
+	},
+	isNotOneOf: {
+		id: 'validarium.isNotOneOf',
+		defaultMessage: "Value can't be any of defined.",
+	},
+	isNegativeNumber: {
+		id: 'validarium.isNegativeNumber',
+		defaultMessage: 'Value has to be a negative number.',
+	},
+	hasDateMin: {
+		id: 'validarium.hasDateMin',
+		defaultMessage: 'Value has to be maximally {maxDate}',
+	},
+	hasDateMax: {
+		id: 'validarium.hasDateMax',
+		defaultMessage: 'Value has to be minimally {minDate}.',
+	},
 };

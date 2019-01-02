@@ -1,3 +1,3 @@
-import { gte, identity, useWith, curry, length } from 'ramda';
+import { gte, identity, useWith, length } from 'ramda';
 
-export default curry(useWith(gte, [identity, length]));
+export default useWith(gte, [identity, length]);

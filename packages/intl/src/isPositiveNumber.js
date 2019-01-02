@@ -11,7 +11,7 @@ Checks if the value is a positive number
 > isPositiveNumber(5)
 null
 
-> isPhoneNumber(-5)
+> isPositiveNumber(-5)
 {message Object}
 
 > isPositiveNumber(0)
