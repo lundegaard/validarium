@@ -1,8 +1,7 @@
 # Intl
-
 This package contains all validation functions for Intl
 
-## API reference 
+## API reference
  <a name="module_intlValidations"></a>
 
 ## intlValidations
@@ -46,7 +45,6 @@ This package contains all validation functions for Intl
 ### intlValidations.isInteger ⇒ <code>Object</code>
 Checks if the value is an integer
 
-**Kind**: static property of [<code>intlValidations</code>](#module_intlValidations)  
 **Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
 **Category**: number  
 **Example**  
@@ -65,7 +63,6 @@ null
 ### intlValidations.isNegativeNumber ⇒ <code>Object</code>
 Checks if the value is a negative number
 
-**Kind**: static property of [<code>intlValidations</code>](#module_intlValidations)  
 **Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
 **Category**: number  
 **Example**  
@@ -87,7 +84,6 @@ null
 ### intlValidations.isPositiveNumber ⇒ <code>Object</code>
 Checks if the value is a positive number
 
-**Kind**: static property of [<code>intlValidations</code>](#module_intlValidations)  
 **Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
 **Category**: number  
 **Example**  
@@ -109,7 +105,6 @@ null
 ### intlValidations.hasAgeInInterval(minAge, maxAge) ⇒ <code>Object</code>
 Checks if the age is in specified interval
 
-**Kind**: static method of [<code>intlValidations</code>](#module_intlValidations)  
 **Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
 **Category**: number  
 
@@ -137,7 +132,6 @@ null
 ### intlValidations.hasValueInInterval(min, max) ⇒ <code>Object</code>
 Checks if the value has only digits
 
-**Kind**: static method of [<code>intlValidations</code>](#module_intlValidations)  
 **Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
 **Category**: number  
 
@@ -165,7 +159,6 @@ null
 ### intlValidations.hasValueMax(max) ⇒ <code>Object</code>
 Checks if the value is lower or equal to max
 
-**Kind**: static method of [<code>intlValidations</code>](#module_intlValidations)  
 **Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
 **Category**: number  
 
@@ -192,7 +185,6 @@ null
 ### intlValidations.hasValueMin(min) ⇒ <code>Object</code>
 Checks if the value is higher or equal to min
 
-**Kind**: static method of [<code>intlValidations</code>](#module_intlValidations)  
 **Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
 **Category**: number  
 
@@ -219,7 +211,6 @@ null
 ### intlValidations.isDivisibleBy(divisor) ⇒ <code>Object</code>
 Checks is value is divisible by desired divisor
 
-**Kind**: static method of [<code>intlValidations</code>](#module_intlValidations)  
 **Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
 **Category**: number  
 
@@ -243,7 +234,6 @@ null
 ### intlValidations.isRequired ⇒ <code>Object</code>
 Checks if the value is present
 
-**Kind**: static property of [<code>intlValidations</code>](#module_intlValidations)  
 **Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
 **Category**: other  
 **Example**  
@@ -262,7 +252,6 @@ null
 ### intlValidations.hasNoSpecialSymbols ⇒ <code>Object</code>
 Checks if the value doesn't contain any special symbol
 
-**Kind**: static property of [<code>intlValidations</code>](#module_intlValidations)  
 **Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
 **Category**: string  
 **Example**  
@@ -281,7 +270,6 @@ null
 ### intlValidations.hasOnlyDigits ⇒ <code>Object</code>
 Checks if the value has only digits
 
-**Kind**: static property of [<code>intlValidations</code>](#module_intlValidations)  
 **Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
 **Category**: string  
 **Example**  
@@ -300,7 +288,6 @@ null
 ### intlValidations.isEmail ⇒ <code>Object</code>
 Checks if the value is valid email
 
-**Kind**: static property of [<code>intlValidations</code>](#module_intlValidations)  
 **Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
 **Category**: string  
 **Example**  
@@ -319,7 +306,6 @@ null
 ### intlValidations.isNumber ⇒ <code>Object</code>
 Checks if the value is a number
 
-**Kind**: static property of [<code>intlValidations</code>](#module_intlValidations)  
 **Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
 **Category**: string  
 **Example**  
@@ -338,7 +324,6 @@ null
 ### intlValidations.visPhoneNumber ⇒ <code>Object</code>
 Checks if the value is a valid phone number
 
-**Kind**: static property of [<code>intlValidations</code>](#module_intlValidations)  
 **Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
 **Category**: string  
 **Example**  
@@ -357,7 +342,6 @@ null
 ### intlValidations.isString ⇒ <code>Object</code>
 Checks if value is type of string
 
-**Kind**: static property of [<code>intlValidations</code>](#module_intlValidations)  
 **Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
 **Category**: string  
 **Example**  
@@ -379,7 +363,6 @@ null
 ### intlValidations.isValidIban ⇒ <code>Object</code>
 Checks if the value is a valid IBAN
 
-**Kind**: static property of [<code>intlValidations</code>](#module_intlValidations)  
 **Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
 **Category**: string  
 **Example**  
@@ -398,7 +381,6 @@ null
 ### intlValidations.matches ⇒ <code>Object</code>
 Checks if value matches the given predicate
 
-**Kind**: static property of [<code>intlValidations</code>](#module_intlValidations)  
 **Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
 **Category**: string  
 
@@ -422,7 +404,6 @@ null
 ### intlValidations.hasDateMax(maximalDate) ⇒ <code>Object</code>
 Checks if the the date is maximally the specified value
 
-**Kind**: static method of [<code>intlValidations</code>](#module_intlValidations)  
 **Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
 **Category**: string  
 
@@ -449,7 +430,6 @@ null
 ### intlValidations.hasDateMin(maximalDate) ⇒ <code>Object</code>
 Checks if the the date is minimally the specified value
 
-**Kind**: static method of [<code>intlValidations</code>](#module_intlValidations)  
 **Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
 **Category**: string  
 
@@ -476,7 +456,6 @@ null
 ### intlValidations.hasLength(length) ⇒ <code>Object</code>
 Checks if the value has exact length
 
-**Kind**: static method of [<code>intlValidations</code>](#module_intlValidations)  
 **Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
 **Category**: string  
 
@@ -500,7 +479,6 @@ null
 ### intlValidations.hasLengthInInterval(min, max) ⇒ <code>Object</code>
 Checks if the value has length in interval
 
-**Kind**: static method of [<code>intlValidations</code>](#module_intlValidations)  
 **Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
 **Category**: string  
 
@@ -528,7 +506,6 @@ null
 ### intlValidations.hasLengthMax(max) ⇒ <code>Object</code>
 Checks if the values length is lower or equal to max
 
-**Kind**: static method of [<code>intlValidations</code>](#module_intlValidations)  
 **Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
 **Category**: string  
 
@@ -555,7 +532,6 @@ null
 ### intlValidations.hasLengthMin(min) ⇒ <code>Object</code>
 Checks if the values length is higher or equal to min
 
-**Kind**: static method of [<code>intlValidations</code>](#module_intlValidations)  
 **Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
 **Category**: string  
 
@@ -582,7 +558,6 @@ null
 ### intlValidations.isNumber(list) ⇒ <code>Object</code>
 Checks if the value doesn't equal any list item
 
-**Kind**: static method of [<code>intlValidations</code>](#module_intlValidations)  
 **Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
 **Category**: string  
 
@@ -606,7 +581,6 @@ null
 ### intlValidations.isOneOf(list) ⇒ <code>Object</code>
 Checks if the value equals any list item
 
-**Kind**: static method of [<code>intlValidations</code>](#module_intlValidations)  
 **Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
 **Category**: string  
 
@@ -630,7 +604,6 @@ null
 ### intlValidations.startsWith() ⇒ <code>Object</code>
 Checks if the value starts with specific string
 
-**Kind**: static method of [<code>intlValidations</code>](#module_intlValidations)  
 **Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
 **Category**: string  
 **Example**  
@@ -647,4 +620,4 @@ null
 
 [back to main page](../../README.md)
 
-© 2018 Lundegaard a.s.
+© 2018-2019 Lundegaard a.s.

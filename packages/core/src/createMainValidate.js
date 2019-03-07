@@ -31,7 +31,7 @@ const isIntlMessageWithArgs = allPass([isObject, ({ message }) => !!isIntlMessag
 const pickByNotNil = pickBy(notNil);
 
 /**
- * Recursevily translates messages in validation result.
+ * Recursively translates messages in validation result.
  */
 const translate = formatMessage =>
 	cond([
@@ -60,10 +60,12 @@ const mergeResults = mergeDeepAllWith(
  * Results of `fns` are translated with `react-intl`;
  * We assume that `props` contains `intl` object from `react-intl` (usually obtained by `injectIntl`).
  *
- * @param  {...Function} fns) Validation functions.
+ * @param  {...Function} fns Validation functions.
  * @param {Object} props
  * @param {any} values
  * @return {Object}         Translated result.
+ *
+ * @alias module:core.createMainValidate
  */
 export const createMainValidate = (...fns) => props => values => {
 	invariant(existFormatMessage(props), 'Function `intl` is required in `createMainValidate`.');

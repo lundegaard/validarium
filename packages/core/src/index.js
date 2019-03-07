@@ -1,3 +1,7 @@
+/**
+@module core
+*/
+
 export { default as createMainValidate } from './createMainValidate';
 export { default as validate } from './validate';
 export { default as validateMany } from './validateMany';

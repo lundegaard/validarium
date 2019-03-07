@@ -44,26 +44,27 @@ const validateListDescriptor = listDescriptor => dispatchValidPredicates(listDes
  *
  * @param {object} descriptor Object that contains validations for each item in `values`
  * @param {any} value Value for validation
+ * @alias module:core.validate
  *
  * @sig Object -> a -> b
  *
  * @example
  *
- *			validate({
- *				id: [(x) => !x && 'Is required.', (x) => x < 0 && 'Must be greater than 0.'],
- *				name: [(x) => !x && 'Is required.'],
- *				surname: [(x) => !x && 'Is required.'],
- *			}, {
- *					id: -1,
- *					surname: 'Doe',
- *				}
- *			])
- *
- *			// 	{
- *			// 		id: 'Must be greater than 0.',
- *			// 		name: 'Is required.',
- *			// 		surname: false,
- *			// 	}
+ * validate({
+ * 	id: [(x) => !x && 'Is required.', (x) => x < 0 && 'Must be greater than 0.'],
+ * 	name: [(x) => !x && 'Is required.'],
+ * 	surname: [(x) => !x && 'Is required.'],
+ * }, {
+ * 		id: -1,
+ * 		surname: 'Doe',
+ * 	}
+ * ])
+ * // Output:
+ * // 	{
+ * // 		id: 'Must be greater than 0.',
+ * // 		name: 'Is required.',
+ * // 		surname: false,
+ * // 	}
  *
  */
 export default ifElse(isArray, validateListDescriptor, validateObjectDescriptor);

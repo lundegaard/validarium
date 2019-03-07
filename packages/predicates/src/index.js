@@ -1,3 +1,6 @@
+/**
+@module predicates
+*/
 export { default as hasLength } from './hasLength';
 export { default as hasLengthInInterval } from './hasLengthInInterval';
 export { default as hasLengthMax } from './hasLengthMax';
