@@ -2,9 +2,11 @@
 
 [![build status](https://img.shields.io/travis/lundegaard/validarium/master.svg?style=flat-square)](https://travis-ci.org/lundegaard/validarium)
 
-An agnostic validation library for JavaScript applications.
+An validation library for JavaScript applications. Ready to be used with react-intl.
 <br />
 <br />
+
+[`Try It`](https://runkit.com/aizerin/validarium)
 
 ## Features
 
@@ -26,7 +28,11 @@ This library provides an easy way how to validate your inputs in JavaScript. It 
 
 ## Installation
 
-Install desired packages with npm as follows
+Install desired packages
+
+`yarn add @validarium/core @validarium/intl`
+
+or
 
 `npm i @validarium/core @validarium/intl`
 

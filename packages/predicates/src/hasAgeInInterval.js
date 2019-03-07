@@ -12,4 +12,7 @@ const getAge = dateString => {
 	return age;
 };
 
+/**
+@alias module:predicates.hasAgeInInterval
+*/
 export default (minAge, maxAge) => o(between(minAge, maxAge), getAge);

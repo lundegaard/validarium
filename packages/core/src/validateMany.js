@@ -10,6 +10,7 @@ import validate from './validate';
  * @param {object} descriptor Object that contains validations for each item in `values`
  * @param {array} values Values for validations
  * @sig Object -> [Object] -> [Object]
+ * @alias module:core.validateMany
  *
  * @example
  *

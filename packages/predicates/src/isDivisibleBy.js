@@ -5,4 +5,7 @@ const isDivisible = compose(
 	equalsToZero,
 	modulo
 );
+/**
+@alias module:predicates.isDivisibleBy
+*/
 export default curry(flip(isDivisible));

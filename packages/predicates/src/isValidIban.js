@@ -50,6 +50,9 @@ const expandTextCharToNumber = o(listToString, map(when(isNotNumeric, decodeChar
 const iso7064Mod97 = ifElse(ltThanLength(2), o(c => iso7064Mod97(c), computeReducedIban), modulo97);
 
 // based on https://en.wikipedia.org/wiki/International_Bank_Account_Number#Validating_the_IBAN
+/**
+@alias module:predicates.isValidIban
+*/
 export default pipe(
 	removeWhiteSpaces,
 	moveFirstFourCharsToEnd,

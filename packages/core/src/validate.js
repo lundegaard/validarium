@@ -44,6 +44,7 @@ const validateListDescriptor = listDescriptor => dispatchValidPredicates(listDes
  *
  * @param {object} descriptor Object that contains validations for each item in `values`
  * @param {any} value Value for validation
+ * @alias module:core.validate
  *
  * @sig Object -> a -> b
  *
