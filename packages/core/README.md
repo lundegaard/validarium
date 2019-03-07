@@ -1,7 +1,159 @@
 # Core
-
 This package contains all core functionalities for Validarium.
+
+## API reference
+ <a name="module_core"></a>
+
+## core
+
+* [core](#module_core)
+    * [.validate](#module_core.validate)
+    * [.validateMany](#module_core.validateMany)
+    * [.createMainValidate](#module_core.createMainValidate) ⇒ <code>Object</code>
+    * [.createOptionalValidation(fn, react, params)](#module_core.createOptionalValidation) ⇒ <code>Object</code> \| <code>null</code>
+    * [.createValidation(fn, react, params)](#module_core.createValidation) ⇒ <code>Object</code> \| <code>null</code>
+
+
+* * *
+
+<a name="module_core.validate"></a>
+
+### core.validate
+Applies validations in `descriptor` for `value`.
+Params are curried.
+
+**Sig**: Object -> a -> b  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| descriptor | <code>object</code> | Object that contains validations for each item in `values` |
+| value | <code>any</code> | Value for validation |
+
+**Example**  
+```js
+validate({
+	id: [(x) => !x && 'Is required.', (x) => x < 0 && 'Must be greater than 0.'],
+	name: [(x) => !x && 'Is required.'],
+	surname: [(x) => !x && 'Is required.'],
+}, {
+		id: -1,
+		surname: 'Doe',
+	}
+])
+// Output:
+// 	{
+// 		id: 'Must be greater than 0.',
+// 		name: 'Is required.',
+// 		surname: false,
+// 	}
+```
+
+* * *
+
+<a name="module_core.validateMany"></a>
+
+### core.validateMany
+Applies validations in `descriptor` for each item in `values`.
+Params are curried.
+
+**Sig**: Object -> [Object] -> [Object]  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| descriptor | <code>object</code> | Object that contains validations for each item in `values` |
+| values | <code>array</code> | Values for validations |
+
+**Example**  
+```js
+validateMany({
+	id: [(x) => !x && 'Is required.', (x) => x < 0 && 'Must be greater than 0.'],
+	name: [(x) => !x && 'Is required.'],
+	surname: [(x) => !x && 'Is required.'],
+}, [
+	{
+		id: -1,
+		surname: 'Doe',
+	},
+	{
+		id: 13,
+		name: 'Bob',
+	},
+])
+// Output:
+// [
+// 	{
+// 		id: 'Must be greater than 0.',
+// 		name: 'Is required.',
+// 		surname: false,
+// 	}, {
+// 		id: false,
+// 		name: false,
+// 		surname: 'Is required.',
+// 	},
+// ]
+```
+
+* * *
+
+<a name="module_core.createMainValidate"></a>
+
+### core.createMainValidate ⇒ <code>Object</code>
+Applies `fns` with `values` and `props`.
+Results of `fns` are translated with `react-intl`;
+We assume that `props` contains `intl` object from `react-intl` (usually obtained by `injectIntl`).
+
+**Returns**: <code>Object</code> - Translated result.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| ...fns | <code>function</code> | Validation functions. |
+| props | <code>Object</code> |  |
+| values | <code>any</code> |  |
+
+
+* * *
+
+<a name="module_core.createOptionalValidation"></a>
+
+### core.createOptionalValidation(fn, react, params) ⇒ <code>Object</code> \| <code>null</code>
+Creates optional validation function with predicate and message
+Results of validation is ready for translation by react-intl.
+
+**Returns**: <code>Object</code> \| <code>null</code> - Message object when fails { message, messageValues } or null if pass  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| fn | <code>function</code> | validation predicate. |
+| react | <code>String</code> | intl message (eg. { id: 1, defaultMessage: '' }) |
+| params | <code>Object</code> | for intl message (eg. { min: 1, max: 2 }) |
+
+
+* * *
+
+<a name="module_core.createValidation"></a>
+
+### core.createValidation(fn, react, params) ⇒ <code>Object</code> \| <code>null</code>
+Creates mandatory validation function with predicate and message
+Results of validation is ready for translation by react-intl.
+
+**Returns**: <code>Object</code> \| <code>null</code> - Message object when fails { message, messageValues } or null if pass  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| fn | <code>function</code> | validation predicate. |
+| react | <code>String</code> | intl message (eg. { id: 1, defaultMessage: '' }) |
+| params | <code>Object</code> | for intl message (eg. { min: 1, max: 2 }) |
+
+**Example**  
+```js
+> const hasLength = length => createValidation(hasLength(length), m.hasLength, { length })
+	> hasLength(6)('abcdef')
+	  null
+```
+
+* * *
+
 
 [back to main page](../../README.md)
 
-© 2018 Lundegaard a.s.
+© 2018-2019 Lundegaard a.s.
