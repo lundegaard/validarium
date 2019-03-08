@@ -26,13 +26,13 @@ describe('createValidation', () => {
 		expect(mockFnTrue.mock.calls[0]).toEqual(args);
 	});
 
-	it('if first argument is nil, it always fail', () => {
+	it('should not fail when value is nil', () => {
 		const mockFnTrue = jest.fn(() => true);
 		const mockValues = { min: 1, max: 2 };
 
 		const validation = createValidation(mockFnTrue, mockMessage, mockValues);
 
-		expect(validation(null)).toBeTruthy();
+		expect(validation(null)).toBeFalsy();
 	});
 
 	it('adds message arguments', () => {

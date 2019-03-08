@@ -2,7 +2,7 @@
 
 [![build status](https://img.shields.io/travis/lundegaard/validarium/master.svg?style=flat-square)](https://travis-ci.org/lundegaard/validarium)
 
-An validation library for JavaScript applications. Ready to be used with react-intl.
+An agnostic validation library for JavaScript applications. With optional support for react-intl.
 <br />
 <br />
 
@@ -10,7 +10,10 @@ An validation library for JavaScript applications. Ready to be used with react-i
 
 ## Features
 
-This library provides an easy way how to validate your inputs in JavaScript. It provides three main packages.
+This library provides an easy way how to validate your inputs in JavaScript.
+Every validation is optional and null-safe. If you want to make required validations, then please use `isRequired` validation.
+
+It provides four main packages.
 
 [`@validarium/core`](packages/core/README.md)
 
@@ -20,9 +23,13 @@ This library provides an easy way how to validate your inputs in JavaScript. It 
 
 - contains predicates which are can be used separately to define you own validation functions.
 
+[`@validarium/validations`](packages/validations/README.md)
+
+- contains validation functions which are composed from predicates and has default message.
+
 [`@validarium/intl`](packages/intl/README.md)
 
-- contains validation functions with Intl localization support.
+- contains translator and convenient validation API for react-intl.
   <br />
   <br />
 
@@ -30,20 +37,19 @@ This library provides an easy way how to validate your inputs in JavaScript. It 
 
 Install desired packages
 
-`yarn add @validarium/core @validarium/intl`
+`yarn add @validarium/core @validarium/intl @validarium/validations`
 
 or
 
-`npm i @validarium/core @validarium/intl`
+`npm i @validarium/core @validarium/intl @validarium/validations`
 
 <br />
 <br />
 
 ## Examples
 
-### @validarium/core and @validarium/intl example
-
-```jsx
+<!-- ```jsx
+TODO: is it really necessary to have this example ?
 // Unclean validations definition
 
 export const getValidate = values => {
@@ -62,11 +68,11 @@ export const getValidate = values => {
 	}
 	return errors;
 };
-```
+``` -->
 
-```jsx
-// Clean validation definition
+### Library usage
 
+```js
 import {
 	isRequired,
 	isEmail,
@@ -74,54 +80,89 @@ import {
 	hasAgeInInterval,
 	hasOnlyDigits,
 	hasDateMin,
-} from '@validarium/intl';
-import { validate, createMainValidate } from '@validarium/core';
+} from '@validarium/validations';
+import { validate, combineValidate, validateMany } from '@validarium/core';
+```
 
-const fieldValidations = validate({
+### Simple usage
+
+```js
+const simpleValidations = validate({
 	email: [isRequired, isEmail, hasLengthMax(200)],
 	age: [isRequired, isNumber, hasValueMin(18)],
 });
 
-export const getValidate = createMainValidate(fieldValidations);
+simpleValidations(valuesToValidate);
 ```
+
+### Nested validation object
 
 ```js
-// Redux form usage
-
-...
-export default reduxForm({
-	form: 'exampleForm',
-	validate: getValidate,
-})(FormComponent);
+const nestedObject = validate({
+	user: [
+		validate({
+			email: [isRequired],
+		}),
+	],
+});
 ```
+
+### Nested validation arrays
+
+```js
+const nestedArray = validate({
+	users: [
+		validateMany({
+			email: [isRequired],
+		}),
+	],
+});
+```
+
+### Combine multiple validation schemes
+
+```js
+const megaValidator = combineValidate(simpleValidations, nestedArray, nestedObject);
+megaValidator(valuesToValidate);
+```
+
+### Usage with intl
+
+```js
+import { translateResult, validateTranslated, combineValidateTranslated } from '@validarium/intl';
+
+translateResult(intl)(fieldValidations(valuesToValidate)); // gives translated result
+validateTranslated(intl, { scheme })(valuesToValidate); // note cannot have nested scheme or be used in combination
+combineValidateTranslated(intl, simpleValidations, nestedArray, nestedObject)(valuesToValidate); // ultimate solution
+```
+
+## third-party library integrations
+
+### redux-form
+
+```js
+...
+reduxForm({
+	form: 'exampleForm',
+	validate: fieldValidations,
+});
+```
+
+### Predicates with redux-form fields
+
+```js
+import { isEmail, hasLengthMax, isRequired } from '@validarium/predicates';
+...
+<Field name="username" type="text"
+ component={renderField} label="Username"
+ validate={[ isRequired, hasLengthMax(15) ]}
+ />
+```
+
+### formik
 
 ```jsx
-// Formik usage
-
-...
-export default (props) =>
-<Formik validate={getValidate(props)}>...</Formik>
-...
-```
-
-### @validarium/predicates with redux-form
-
-```js
-// import desired predicates
-import { isEmail, hasLengthMax } from '@validarium/predicates';
-...
-// use predicates on fields
-<form onSubmit={handleSubmit}>
-      <Field name="username" type="text"
-        component={renderField} label="Username"
-        validate={[ required, maxLength(15) ]}
-      />
-      <Field name="email" type="email"
-        component={renderField} label="Email"
-        validate={isEmail}
-      />
-</form>
-...
+<Formik validate={fieldValidations} />
 ```
 
 <br />

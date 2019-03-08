@@ -9,8 +9,7 @@ This package contains all core functionalities for Validarium.
 * [core](#module_core)
     * [.validate](#module_core.validate)
     * [.validateMany](#module_core.validateMany)
-    * [.createMainValidate](#module_core.createMainValidate) ⇒ <code>Object</code>
-    * [.createOptionalValidation(fn, react, params)](#module_core.createOptionalValidation) ⇒ <code>Object</code> \| <code>null</code>
+    * [.combineValidate(...fns, values)](#module_core.combineValidate) ⇒ <code>Object</code>
     * [.createValidation(fn, react, params)](#module_core.createValidation) ⇒ <code>Object</code> \| <code>null</code>
 
 
@@ -95,37 +94,17 @@ validateMany({
 
 * * *
 
-<a name="module_core.createMainValidate"></a>
+<a name="module_core.combineValidate"></a>
 
-### core.createMainValidate ⇒ <code>Object</code>
-Applies `fns` with `values` and `props`.
-Results of `fns` are translated with `react-intl`;
-We assume that `props` contains `intl` object from `react-intl` (usually obtained by `injectIntl`).
+### core.combineValidate(...fns, values) ⇒ <code>Object</code>
+Combine multiple validate schemes into one. If multiple schemes contains same validation, then the error validation * always wins.
 
-**Returns**: <code>Object</code> - Translated result.  
+**Returns**: <code>Object</code> - Merged result result.  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | ...fns | <code>function</code> | Validation functions. |
-| props | <code>Object</code> |  |
 | values | <code>any</code> |  |
-
-
-* * *
-
-<a name="module_core.createOptionalValidation"></a>
-
-### core.createOptionalValidation(fn, react, params) ⇒ <code>Object</code> \| <code>null</code>
-Creates optional validation function with predicate and message
-Results of validation is ready for translation by react-intl.
-
-**Returns**: <code>Object</code> \| <code>null</code> - Message object when fails { message, messageValues } or null if pass  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| fn | <code>function</code> | validation predicate. |
-| react | <code>String</code> | intl message (eg. { id: 1, defaultMessage: '' }) |
-| params | <code>Object</code> | for intl message (eg. { min: 1, max: 2 }) |
 
 
 * * *
@@ -133,8 +112,9 @@ Results of validation is ready for translation by react-intl.
 <a name="module_core.createValidation"></a>
 
 ### core.createValidation(fn, react, params) ⇒ <code>Object</code> \| <code>null</code>
-Creates mandatory validation function with predicate and message
+Creates validation function with predicate and message.
 Results of validation is ready for translation by react-intl.
+Result is valid if nil or empty is passed. Use required validation if you want to ensure that field is required.
 
 **Returns**: <code>Object</code> \| <code>null</code> - Message object when fails { message, messageValues } or null if pass  
 

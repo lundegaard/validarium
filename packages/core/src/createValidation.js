@@ -1,9 +1,10 @@
-import { ifElse, allPass, always } from 'ramda';
-import { alwaysNull, isNotNil, isNotEmpty } from 'ramda-extension';
+import { always, cond, T } from 'ramda';
+import { alwaysNull, isNilOrEmpty } from 'ramda-extension';
 
 /**
- * Creates mandatory validation function with predicate and message
+ * Creates validation function with predicate and message.
  * Results of validation is ready for translation by react-intl.
+ * Result is valid if nil or empty is passed. Use required validation if you want to ensure that field is required.
  *
  * @param {Function} fn validation predicate.
  * @param {String} react intl message (eg. { id: 1, defaultMessage: '' })
@@ -17,8 +18,8 @@ import { alwaysNull, isNotNil, isNotEmpty } from 'ramda-extension';
  * @alias module:core.createValidation
  */
 export default (predicate, message, messageValues) =>
-	ifElse(
-		allPass([isNotNil, isNotEmpty, predicate]),
-		alwaysNull,
-		always({ message, messageValues })
-	);
+	cond([
+		[isNilOrEmpty, alwaysNull], // null-safe before predicate
+		[predicate, alwaysNull],
+		[T, always({ message, messageValues })],
+	]);
