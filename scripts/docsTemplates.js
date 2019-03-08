@@ -8,10 +8,16 @@ const apiRef = ref => `## API reference
  {{>docs~}}
  {{/module}}`;
 
-const intl = `# Intl
-This package contains all validation functions for Intl
+const validations = `# Validations
+This package contains common validation functions
 
-${apiRef('intlValidations')}
+${apiRef('validations')}
+${footer}`;
+
+const intl = `# Intl
+This package provides translator for react-inl messages. Also convenient API for validations.
+
+${apiRef('intl')}
 ${footer}`;
 
 const core = `# Core
@@ -32,7 +38,8 @@ ${footer}`;
 const createRecord = (packageName, template) => ({ packageName, template });
 
 module.exports = [
-	createRecord('intl', intl),
+	createRecord('validations', validations),
 	createRecord('core', core),
 	createRecord('predicates', predicates),
+	createRecord('intl', intl),
 ];

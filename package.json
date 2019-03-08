@@ -68,6 +68,7 @@
 	"scripts": {
 		"publishAll": "yarn build && yarn lerna publish --access public --registry https://registry.npmjs.org/",
 		"test": "jest",
+		"test:watch": "jest --watch",
 		"lint": "yarn lint:eslint",
 		"lint:eslint": "eslint --ext .js ./",
 		"build": "lerna exec -- rollup -c=../../rollup.config.js",
