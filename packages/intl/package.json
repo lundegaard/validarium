@@ -1,5 +1,5 @@
 {
-	"version": "0.3.3",
+	"version": "0.4.0",
 	"name": "@validarium/intl",
 	"license": "MIT",
 	"main": "lib/validarium-validations.js",
@@ -18,8 +18,8 @@
 		"Lukas Sulik <lukas.sulik@lundegaard.eu>"
 	],
 	"dependencies": {
+		"@validarium/core": "^0.4.0",
 		"invariant": "^2.2.4",
-		"@validarium/core": "^0.2.3",
 		"ramda": "^0.26.1",
 		"ramda-extension": "^0.7.2"
 	}
