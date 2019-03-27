@@ -2,9 +2,9 @@
 	"version": "0.4.0",
 	"name": "@validarium/intl",
 	"license": "MIT",
-	"main": "lib/validarium-validations.js",
-	"module": "es/validarium-validations.js",
-	"unpkg": "dist/validarium-validations.js",
+	"main": "lib/validarium-intl.js",
+	"module": "es/validarium-intl.js",
+	"unpkg": "dist/validarium-intl.js",
 	"publishConfig": {
 		"access": "public",
 		"registry": "https://registry.npmjs.org/"
