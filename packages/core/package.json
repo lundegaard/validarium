@@ -20,6 +20,6 @@
   "dependencies": {
     "invariant": "^2.2.4",
     "ramda": "^0.26.1",
-    "ramda-extension": "^0.7.2"
+		"ramda-extension": "^0.8.0"
   }
 }

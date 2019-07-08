@@ -119,10 +119,21 @@ const nestedArray = validate({
 });
 ```
 
+### Combine validations
+
+```js
+const isValidUsername = combineValidate(hasNoSpecialSymbols, hasNoWhiteSpace);
+
+const fieldValidations = validate({ username: [isRequired, isValidUsername] });
+
+fieldValidations({ username: ' $ invalid username' });
+```
+
 ### Combine multiple validation schemes
 
 ```js
 const megaValidator = combineValidate(simpleValidations, nestedArray, nestedObject);
+
 megaValidator(valuesToValidate);
 ```
 
@@ -168,10 +179,16 @@ import { isEmail, hasLengthMax, isRequired } from '@validarium/predicates';
 <br />
 <br />
 
+
 ## Contribution
 
 We are open to any ideas and suggestions! Feel free to make PR!
 <br />
 <br />
 
-© 2018 Lundegaard a.s.
+## See our related projects
+
+* [@redux-tools](https://github.com/lundegaard/redux-tools)
+* [react-union](https://github.com/lundegaard/react-union)
+
+© 2018-2019 Lundegaard a.s.

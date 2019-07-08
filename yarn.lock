@@ -5249,10 +5249,10 @@ quick-lru@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/quick-lru/-/quick-lru-1.1.0.tgz#4360b17c61136ad38078397ff11416e186dcfbb8"
 
-ramda-extension@^0.7.2:
-  version "0.7.2"
-  resolved "https://registry.yarnpkg.com/ramda-extension/-/ramda-extension-0.7.2.tgz#dd84a112b39f57c8d2d3cd27192057e52934ef58"
-  integrity sha512-3fyZ+u/7IxkdKFlrVk34oKVtDlIxBc2ihius8BEDqsbBziL01P3+QbXncAgFAQPWgpv9dTgM8oRYwINvsnnorQ==
+ramda-extension@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/ramda-extension/-/ramda-extension-0.8.0.tgz#df4f271f439b73b1aec255a39eed6cac667ada6e"
+  integrity sha512-bi+JbYlCtAar5TLExV548KyAKc+TBjhtY7dwulj119VFMpdhI6ExyjXvqiFGHcpRG8cWC20ePoSh0DhZZO54Lw==
 
 ramda@^0.25.0:
   version "0.25.0"
