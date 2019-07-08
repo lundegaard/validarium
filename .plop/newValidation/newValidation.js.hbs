@@ -1,0 +1,20 @@
+import createValidation from '@validarium/core/src/createValidation';
+import {{camelCase name}} from '@validarium/predicates/src/{{camelCase name}}';
+import m from './messages';
+
+/**
+Description
+
+@returns {Object} {message Object} when predicate fails or null when pass
+
+@category {{category}}
+@example
+> {{camelCase name}}('valid value')
+null
+
+> {{camelCase name}}('invalid value')
+{message Object}
+
+@alias module:validations.{{camelCase name}}
+*/
+export default createValidation({{camelCase name}}, m.{{camelCase name}});
