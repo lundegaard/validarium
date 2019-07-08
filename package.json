@@ -54,6 +54,7 @@
 		"jsdoc-to-markdown": "^4.0.1",
 		"lerna": "2.2.0",
 		"lint-staged": "8.1.5",
+		"plop": "^2.4.0",
 		"prettier": "1.16.4",
 		"ramda": "^0.26.1",
 		"ramda-extension": "^0.8.0",
@@ -73,7 +74,8 @@
 		"lint:eslint": "eslint --ext .js ./",
 		"build": "lerna exec -- rollup -c=../../rollup.config.js",
 		"prepublish": "yarn build",
-		"generate:docs": "node scripts/generateDocs.js"
+		"generate:docs": "node scripts/generateDocs.js",
+		"generate:plop": "plop --plopfile ./.plop/plopfile.js"
 	},
 	"lint-staged": {
 		"linters": {

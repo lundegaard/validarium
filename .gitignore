@@ -10,6 +10,8 @@ packages/*/dist/*
 packages/*/es/*
 packages/*/build/*
 
+!.plop
+
 ### Vim ###
 *:p
 # Swap
