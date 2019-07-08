@@ -19,3 +19,4 @@ export { default as isPositiveNumber } from './isPositiveNumber';
 export { default as isRequired } from './isRequired';
 export { default as isValidIban } from './isValidIban';
 export { default as startsWith } from './startsWith';
+export { default as hasNoWhiteSpace } from './hasNoWhiteSpace';

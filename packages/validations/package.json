@@ -21,6 +21,6 @@
 		"@validarium/core": "^0.4.0",
 		"@validarium/predicates": "^0.4.0",
 		"ramda": "^0.26.1",
-		"ramda-extension": "^0.7.2"
+		"ramda-extension": "^0.8.0"
 	}
 }

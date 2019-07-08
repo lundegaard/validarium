@@ -56,7 +56,7 @@
 		"lint-staged": "8.1.5",
 		"prettier": "1.16.4",
 		"ramda": "^0.26.1",
-		"ramda-extension": "^0.7.2",
+		"ramda-extension": "^0.8.0",
 		"rollup": "^1.4.1",
 		"rollup-plugin-auto-external": "^2.0.0",
 		"rollup-plugin-babel": "^4.3.2",

@@ -11,6 +11,7 @@ packages/*/es/*
 packages/*/build/*
 
 ### Vim ###
+*:p
 # Swap
 [._]*.s[a-v][a-z]
 [._]*.sw[a-p]

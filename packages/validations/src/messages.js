@@ -85,15 +85,15 @@ export default {
 	},
 	isOneOf: {
 		id: 'validarium.isOneOf',
-		defaultMessage: 'Value has to be one of defined.',
+		defaultMessage: 'Value has to be one of defined',
 	},
 	isNotOneOf: {
 		id: 'validarium.isNotOneOf',
-		defaultMessage: "Value can't be any of defined.",
+		defaultMessage: "Value can't be any of defined",
 	},
 	isNegativeNumber: {
 		id: 'validarium.isNegativeNumber',
-		defaultMessage: 'Value has to be a negative number.',
+		defaultMessage: 'Value has to be a negative number',
 	},
 	hasDateMin: {
 		id: 'validarium.hasDateMin',
@@ -101,6 +101,10 @@ export default {
 	},
 	hasDateMax: {
 		id: 'validarium.hasDateMax',
-		defaultMessage: 'Value has to be minimally {minDate}.',
+		defaultMessage: 'Value has to be minimally {minDate}',
+	},
+	hasNoWhiteSpace: {
+		id: 'validarium.hasNoWhiteSpace',
+		defaultMessage: 'Do not use spaces or tabs',
 	},
 };

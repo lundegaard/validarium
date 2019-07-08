@@ -8,6 +8,7 @@ export { default as hasValueMin } from './hasValueMin';
 export { default as isInteger } from './isInteger';
 export { default as isPositiveNumber } from './isPositiveNumber';
 export { default as hasLengthMax } from './hasLengthMax';
+export { default as hasNoWhiteSpace } from './hasNoWhiteSpace';
 export { default as hasValueInInterval } from './hasValueInInterval';
 export { default as isDivisibleBy } from './isDivisibleBy';
 export { default as isNumber } from './isNumber';
