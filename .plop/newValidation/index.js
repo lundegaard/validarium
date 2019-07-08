@@ -9,6 +9,12 @@ module.exports = {
 			name: 'name',
 			message: 'Name of the validation',
 		},
+		{
+			type: 'list',
+			name: 'category',
+			message: 'Category of the function',
+			choices: ['string', 'number', 'object', 'array', 'boolean'],
+		},
 	],
 	actions: (/* input */) => [
 		{
@@ -16,13 +22,6 @@ module.exports = {
 			path: path.join(rootDir, 'packages/validations/src/{{camelCase name}}.js'),
 			templateFile: path.join(__dirname, './newValidation.js.hbs'),
 		},
-		{
-			type: 'list',
-			name: 'category',
-			message: 'Category of the function',
-			choices: ['String', 'Number', 'Object', 'Array', 'Boolean'],
-		},
-
 		{
 			type: 'append',
 			path: path.join(rootDir, 'packages/validations/src/index.js'),
