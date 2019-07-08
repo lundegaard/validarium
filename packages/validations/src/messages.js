@@ -1,4 +1,16 @@
 export default {
+	isTrimmedRight: {
+		id: 'validarium.isTrimmedRight',
+		defaultMessage: 'isTrimmedRight',
+	},
+	isTrimmedLeft: {
+		id: 'validarium.isTrimmedLeft',
+		defaultMessage: 'Must not start tab or space',
+	},
+	isTrimmed: {
+		id: 'validarium.isTrimmed',
+		defaultMessage: 'Must not start or end with tab or space',
+	},
 	isDivisibleBy: {
 		id: 'validarium.isDivisibleBy',
 		defaultMessage: 'Must be divisible by {divider}',

@@ -20,3 +20,6 @@ export { default as isRequired } from './isRequired';
 export { default as isValidIban } from './isValidIban';
 export { default as startsWith } from './startsWith';
 export { default as hasNoWhiteSpace } from './hasNoWhiteSpace';
+export { default as isTrimmed } from './isTrimmed';
+export { default as isTrimmedLeft } from './isTrimmedLeft';
+export { default as isTrimmedRight } from './isTrimmedRight';
