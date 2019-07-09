@@ -16,6 +16,7 @@ You can use them for composing custom functionality.
     * [.hasLengthMax](#module_predicates.hasLengthMax)
     * [.hasLengthMin](#module_predicates.hasLengthMin)
     * [.hasNoSpecialSymbols](#module_predicates.hasNoSpecialSymbols)
+    * [.hasNoWhiteSpace](#module_predicates.hasNoWhiteSpace)
     * [.hasOnlyDigits](#module_predicates.hasOnlyDigits)
     * [.hasValueInInterval](#module_predicates.hasValueInInterval)
     * [.hasValueMax](#module_predicates.hasValueMax)
@@ -30,7 +31,10 @@ You can use them for composing custom functionality.
     * [.isPositiveNumber](#module_predicates.isPositiveNumber)
     * [.isRequired](#module_predicates.isRequired)
     * [.isString](#module_predicates.isString)
+    * [.isTrimmedLeft](#module_predicates.isTrimmedLeft)
+    * [.isTrimmedRight](#module_predicates.isTrimmedRight)
     * [.isValidIban](#module_predicates.isValidIban)
+    * [.isTrimmed](#module_predicates.isTrimmed)
     * [.hasAgeInInterval()](#module_predicates.hasAgeInInterval)
     * [.hasLengthInterval()](#module_predicates.hasLengthInterval)
     * [.isNotOneOf()](#module_predicates.isNotOneOf)
@@ -73,6 +77,12 @@ You can use them for composing custom functionality.
 <a name="module_predicates.hasNoSpecialSymbols"></a>
 
 ### predicates.hasNoSpecialSymbols
+
+* * *
+
+<a name="module_predicates.hasNoWhiteSpace"></a>
+
+### predicates.hasNoWhiteSpace
 
 * * *
 
@@ -160,9 +170,27 @@ You can use them for composing custom functionality.
 
 * * *
 
+<a name="module_predicates.isTrimmedLeft"></a>
+
+### predicates.isTrimmedLeft
+
+* * *
+
+<a name="module_predicates.isTrimmedRight"></a>
+
+### predicates.isTrimmedRight
+
+* * *
+
 <a name="module_predicates.isValidIban"></a>
 
 ### predicates.isValidIban
+
+* * *
+
+<a name="module_predicates.isTrimmed"></a>
+
+### predicates.isTrimmed
 
 * * *
 
