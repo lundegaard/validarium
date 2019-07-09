@@ -8,6 +8,7 @@ This package contains common validation functions
 
 * [validations](#module_validations)
     * _number_
+        * [.hasNoWhiteSpace](#module_validations.hasNoWhiteSpace) ⇒ <code>Object</code>
         * [.isInteger](#module_validations.isInteger) ⇒ <code>Object</code>
         * [.isNegativeNumber](#module_validations.isNegativeNumber) ⇒ <code>Object</code>
         * [.isPositiveNumber](#module_validations.isPositiveNumber) ⇒ <code>Object</code>
@@ -25,6 +26,9 @@ This package contains common validation functions
         * [.isNumber](#module_validations.isNumber) ⇒ <code>Object</code>
         * [.visPhoneNumber](#module_validations.visPhoneNumber) ⇒ <code>Object</code>
         * [.isString](#module_validations.isString) ⇒ <code>Object</code>
+        * [.isTrimmed](#module_validations.isTrimmed) ⇒ <code>Object</code>
+        * [.isTrimmedLeft](#module_validations.isTrimmedLeft) ⇒ <code>Object</code>
+        * [.isTrimmedRight](#module_validations.isTrimmedRight) ⇒ <code>Object</code>
         * [.isValidIban](#module_validations.isValidIban) ⇒ <code>Object</code>
         * [.matches](#module_validations.matches) ⇒ <code>Object</code>
         * [.hasDateMax(maximalDate)](#module_validations.hasDateMax) ⇒ <code>Object</code>
@@ -37,6 +41,27 @@ This package contains common validation functions
         * [.isOneOf(list)](#module_validations.isOneOf) ⇒ <code>Object</code>
         * [.startsWith()](#module_validations.startsWith) ⇒ <code>Object</code>
 
+
+* * *
+
+<a name="module_validations.hasNoWhiteSpace"></a>
+
+### validations.hasNoWhiteSpace ⇒ <code>Object</code>
+Checks if a string contains no white space.
+
+**Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
+**Category**: number  
+**Example**  
+```js
+> hasNoWhiteSpace("")
+null
+
+> hasNoWhiteSpace("validarium")
+null
+
+> hasNoWhiteSpace("vali darium")
+{message Object}
+```
 
 * * *
 
@@ -353,6 +378,66 @@ null
 null
 
 > isString(123)
+{message Object}
+```
+
+* * *
+
+<a name="module_validations.isTrimmed"></a>
+
+### validations.isTrimmed ⇒ <code>Object</code>
+Checkes if the string do not starts or ends with whitespaces.
+
+**Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
+**Category**: string  
+**Example**  
+```js
+> isTrimmed('valid value')
+null
+
+> isTrimmed(' invalid value')
+{message Object}
+
+> isTrimmed('invalid value ')
+{message Object}
+
+> isTrimmed(' invalid value ')
+{message Object}
+```
+
+* * *
+
+<a name="module_validations.isTrimmedLeft"></a>
+
+### validations.isTrimmedLeft ⇒ <code>Object</code>
+Checkes if the string do not starts with whitespaces.
+
+**Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
+**Category**: string  
+**Example**  
+```js
+> isTrimmedLeft('valid value')
+null
+
+> isTrimmedLeft(' invalid value')
+{message Object}
+```
+
+* * *
+
+<a name="module_validations.isTrimmedRight"></a>
+
+### validations.isTrimmedRight ⇒ <code>Object</code>
+Checkes if the string do not ends with whitespaces.
+
+**Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
+**Category**: string  
+**Example**  
+```js
+> isTrimmedRight('valid value')
+null
+
+> isTrimmedRight('invalid value  ')
 {message Object}
 ```
 
