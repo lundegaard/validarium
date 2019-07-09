@@ -1,5 +1,5 @@
 {
-  "version": "0.4.0",
+  "version": "0.5.0",
   "name": "@validarium/predicates",
   "license": "MIT",
   "main": "lib/validarium-predicates.js",
@@ -20,6 +20,6 @@
   "dependencies": {
     "invariant": "^2.2.4",
     "ramda": "^0.26.1",
-		"ramda-extension": "^0.8.0"
+    "ramda-extension": "^0.8.0"
   }
 }
