@@ -13,17 +13,18 @@ import {
 	when,
 	values,
 	o,
+	mapObjIndexed,
 } from 'ramda';
 import { alwaysNull, isArray, notNil, notEmpty, dispatch, isNilOrEmpty } from 'ramda-extension';
 
-const dispatchValidPredicates = predicates => (...args) =>
-	isNilOrEmpty(predicates) ? null : dispatch(predicates)(...args);
+const dispatchValidPredicates = (predicates, key) => value =>
+	isNilOrEmpty(predicates) ? null : dispatch(predicates)(value, key);
 
 const validObject = anyPass([isEmpty, o(x => !x, values)]);
 
 // TODO: refactor
 const validateObjectDescriptor = descriptor => {
-	const evolution = map(dispatchValidPredicates)(descriptor);
+	const evolution = mapObjIndexed(dispatchValidPredicates)(descriptor);
 	const keysToValidate = keys(descriptor);
 	const dull = map(alwaysNull)(descriptor);
 

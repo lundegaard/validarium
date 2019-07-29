@@ -1,6 +1,7 @@
 import validate from './validate';
 
 const required = x => (!x ? 'Is required.' : null);
+const requiredWithFieldName = (x, key) => (!x ? `${key} is required.` : null);
 const greaterThan0 = x => (x < 0 ? 'Must be greater than 0.' : null);
 
 describe('validate', () => {
@@ -27,9 +28,9 @@ describe('validate', () => {
 
 	describe('for validation descriptor that is object', () => {
 		const simpleDescriptor = {
-			id: [required],
-			name: [required],
-			surname: [required],
+			id: [requiredWithFieldName],
+			name: [requiredWithFieldName],
+			surname: [requiredWithFieldName],
 		};
 
 		it('returns result of validation functions for each property', () => {
@@ -40,9 +41,9 @@ describe('validate', () => {
 					surname: '',
 				})
 			).toEqual({
-				id: 'Is required.',
-				name: 'Is required.',
-				surname: 'Is required.',
+				id: 'id is required.',
+				name: 'name is required.',
+				surname: 'surname is required.',
 			});
 		});
 
@@ -58,9 +59,9 @@ describe('validate', () => {
 
 		it('works with attributes that are described in descriptor but not in validated object', () => {
 			expect(validate(simpleDescriptor)({})).toEqual({
-				id: 'Is required.',
-				name: 'Is required.',
-				surname: 'Is required.',
+				id: 'id is required.',
+				name: 'name is required.',
+				surname: 'surname is required.',
 			});
 		});
 	});
