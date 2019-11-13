@@ -1,5 +1,5 @@
-import { T, compose, cond, juxt, mergeDeepLeft, flip, nthArg } from 'ramda';
-import { rejectNil, isObject, mergeDeepAllWith, headArg } from 'ramda-extension';
+import { T, compose, cond, juxt, flip, nthArg } from 'ramda';
+import { rejectNil, mergeDeepAllWith, headArg } from 'ramda-extension';
 import { isNilOrAllIsNil } from './utils';
 
 /**
@@ -7,12 +7,7 @@ import { isNilOrAllIsNil } from './utils';
  * We don't want to null results replacing those already filled.
  */
 const mergeResults = mergeDeepAllWith(
-	cond([
-		[isNilOrAllIsNil, nthArg(1)],
-		[flip(isNilOrAllIsNil), headArg],
-		[(a, b) => isObject(a) && isObject(b), mergeDeepLeft],
-		[T, headArg],
-	])
+	cond([[isNilOrAllIsNil, nthArg(1)], [flip(isNilOrAllIsNil), headArg], [T, headArg]])
 );
 
 /**
