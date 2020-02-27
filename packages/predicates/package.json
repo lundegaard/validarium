@@ -1,25 +1,25 @@
 {
-  "version": "0.5.1-0",
-  "name": "@validarium/predicates",
-  "license": "MIT",
-  "main": "lib/validarium-predicates.js",
-  "module": "es/validarium-predicates.js",
-  "unpkg": "dist/validarium-predicates.js",
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
-  },
-  "sideEffects": false,
-  "description": "Reusable predicates used within @validarium/intl.",
-  "contributors": [
-    "Tomas Konrady <tomas.konrady@lundegaard.eu>",
-    "Vaclav Jancarik <vaclav.jancarik@lundegaard.eu>",
-    "Kristyna Kamenicka <kristyna.kamenicka@lundegaard.eu>",
-    "Lukas Sulik <lukas.sulik@lundegaard.eu>"
-  ],
-  "dependencies": {
-    "invariant": "^2.2.4",
-    "ramda": "^0.26.1",
-    "ramda-extension": "^0.8.0"
-  }
+	"version": "0.5.1",
+	"name": "@validarium/predicates",
+	"license": "MIT",
+	"main": "lib/validarium-predicates.js",
+	"module": "es/validarium-predicates.js",
+	"unpkg": "dist/validarium-predicates.js",
+	"publishConfig": {
+		"access": "public",
+		"registry": "https://registry.npmjs.org/"
+	},
+	"sideEffects": false,
+	"description": "Reusable predicates used within @validarium/intl.",
+	"contributors": [
+		"Tomas Konrady <tomas.konrady@lundegaard.eu>",
+		"Vaclav Jancarik <vaclav.jancarik@lundegaard.eu>",
+		"Kristyna Kamenicka <kristyna.kamenicka@lundegaard.eu>",
+		"Lukas Sulik <lukas.sulik@lundegaard.eu>"
+	],
+	"dependencies": {
+		"invariant": "^2.2.4",
+		"ramda": "^0.26.1",
+		"ramda-extension": "^0.8.0"
+	}
 }

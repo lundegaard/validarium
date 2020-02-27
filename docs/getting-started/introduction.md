@@ -74,7 +74,7 @@ npm i @validarium/intl @validarium/intl
 
 We are open to any ideas and suggestions! Feel free to make PR!
 
-See [contribution guide](https://github.com/lundegaard/validarium/blob/master/CONTRIBUTING.md) for guidelines.
+See [contribution guide](contributing) for guidelines.
 <br />
 <br />
 

@@ -1,5 +1,5 @@
 {
-	"version": "0.5.1-0",
+	"version": "0.5.1",
 	"name": "validarium",
 	"license": "MIT",
 	"main": "lib/validarium.js",
@@ -18,7 +18,7 @@
 	},
 	"sideEffects": false,
 	"dependencies": {
-		"@validarium/core": "^0.5.1-0",
-		"@validarium/validations": "^0.5.1-0"
+		"@validarium/core": "^0.5.1",
+		"@validarium/validations": "^0.5.1"
 	}
 }
