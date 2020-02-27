@@ -1,4 +1,4 @@
-# Validarium
+# Validarium 
 
 ![MIT License][license-badge]
 [![build status](https://img.shields.io/travis/lundegaard/validarium/master.svg?style=flat-square)](https://travis-ci.org/lundegaard/validarium)
@@ -11,8 +11,6 @@
 [license-badge]: https://flat.badgen.net/badge/license/MIT/blue
 [npm]: https://npmjs.com/package/@validarium/core
 
-An agnostic validation library for JavaScript applications. With optional support for react-intl.
-
 [`Try It`](https://runkit.com/aizerin/validarium)
 
 ## Features
@@ -20,7 +18,9 @@ An agnostic validation library for JavaScript applications. With optional suppor
 This library provides an easy way how to validate your inputs in JavaScript.
 Every validation is optional and null-safe. If you want to make required validations, then please use `isRequired` validation.
 
-It provides four main packages.
+The main package `validarium` exports all functions from both `@validarium/core` and `@validarium/validations`. 
+
+For advanced usage you can use validarium packages separately:
 
 [`@validarium/core`](packages/core)
 
@@ -40,15 +40,32 @@ It provides four main packages.
   <br />
   <br />
 
-## Installation
+## Installation {docsify-ignore-all}
 
-Install desired packages
+Install desired packages.
 
-`yarn add @validarium/core @validarium/intl @validarium/validations`
+### yarn {docsify-ignore}
 
-or
+```
+yarn add validarium
+```
 
-`npm i @validarium/core @validarium/intl @validarium/validations`
+Additional packages:
+```
+yarn add @validarium/intl @validarium/intl
+```
+
+### npm {docsify-ignore}
+
+```
+npm i validarium
+```
+
+Additional packages:
+
+```
+npm i @validarium/intl @validarium/intl
+```
 
 <br />
 <br />
@@ -56,13 +73,13 @@ or
 ## Contribution
 
 We are open to any ideas and suggestions! Feel free to make PR!
+
+See [contribution guide](https://github.com/lundegaard/validarium/blob/master/CONTRIBUTING.md) for guidelines.
 <br />
 <br />
 
-## See our related projects
+## Related projects
 
 * [@redux-tools](https://github.com/lundegaard/redux-tools)
 * [react-union](https://github.com/lundegaard/react-union)
-
-© 2018-2019 Lundegaard a.s.
-
+* [lundium](https://github.com/lundegaard/lundium)
