@@ -11,6 +11,11 @@
 		/>
 		<link type="image/x-icon" rel="shortcut icon" href="favicon.ico" />
 		<link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css" />
+		<style>
+			.app-name img {
+				width: 90%;
+			}
+		</style>
 	</head>
 	<body>
 		<div id="app"></div>
@@ -23,10 +28,11 @@
 				alias: {
 					'/.*/_sidebar.md': '/_sidebar.md'
 				},
+				coverpage: true,
 				subMaxLevel: 3,
 				auto2top: true,
 				themeColor: '#FF6D6B',
-				/*logo: '/logo.png',*/
+				logo: '_media/logo.png',
 				homepage: '/getting-started/introduction.md'
 			};
 		</script>

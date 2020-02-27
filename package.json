@@ -77,7 +77,7 @@
 		"prepublish": "yarn build && yarn generate:docs",
 		"generate:docs": "node scripts/generateDocs.js",
 		"generate:plop": "plop --plopfile ./.plop/plopfile.js",
-		"docs": "yarn serve docs"
+		"docs": "yarn serve -s ./docs"
 	},
 	"lint-staged": {
 		"linters": {
