@@ -19,7 +19,9 @@ An agnostic validation library for JavaScript applications. With optional suppor
 This library provides an easy way how to validate your inputs in JavaScript.
 Every validation is optional and null-safe. If you want to make required validations, then please use `isRequired` validation.
 
-It provides four main packages.
+The main package [`validarium`](packages/validarium/README.md) exports all functions from both `@validarium/core` and `@validarium/validations`. 
+
+For advanced usage you can use validarium packages separately:
 
 [`@validarium/core`](packages/core/README.md)
 
@@ -41,13 +43,28 @@ It provides four main packages.
 
 ## Installation
 
-Install desired packages
+### yarn
 
-`yarn add @validarium/core @validarium/intl @validarium/validations`
+```
+yarn add validarium
+```
 
-or
+Additional packages:
+```
+yarn add @validarium/intl @validarium/intl
+```
 
-`npm i @validarium/core @validarium/intl @validarium/validations`
+### npm
+
+```
+npm i validarium
+```
+
+Additional packages:
+
+```
+npm i @validarium/intl @validarium/intl
+```
 
 <br />
 <br />
@@ -86,8 +103,10 @@ import {
 	hasAgeInInterval,
 	hasOnlyDigits,
 	hasDateMin,
-} from '@validarium/validations';
-import { validate, combineValidate, validateMany } from '@validarium/core';
+	validate,
+  combineValidate,
+	validateMany 
+} from 'validarium';
 ```
 
 ### Simple usage
@@ -189,6 +208,8 @@ import { isEmail, hasLengthMax, isRequired } from '@validarium/predicates';
 ## Contribution
 
 We are open to any ideas and suggestions! Feel free to make PR!
+
+See [contribution guide](https://github.com/lundegaard/validarium/blob/master/CONTRIBUTING.md) for guidelines.
 <br />
 <br />
 
@@ -196,5 +217,6 @@ We are open to any ideas and suggestions! Feel free to make PR!
 
 * [@redux-tools](https://github.com/lundegaard/redux-tools)
 * [react-union](https://github.com/lundegaard/react-union)
+* [@redux-tools](https://github.com/lundegaard/lundium)
 
-© 2018-2019 Lundegaard a.s.
+© 2018-2020 Lundegaard a.s.
