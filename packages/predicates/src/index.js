@@ -1,6 +1,10 @@
 /**
-@module predicates
-*/
+ * This package contains all predicates used in validation functions. Name and usage is self explanatory. If not, please look at the tests.
+ *
+ * You can use them for composing custom functionality.
+ *
+ * @module predicates
+ */
 export { default as hasLength } from './hasLength';
 export { default as hasLengthInInterval } from './hasLengthInInterval';
 export { default as hasLengthMax } from './hasLengthMax';

@@ -1,39 +1,29 @@
-const footer = `
-[back to main page](../../README.md)
+// const footer = `© 2018-${new Date().getFullYear()} Lundegaard a.s.`;
 
-© 2018-${new Date().getFullYear()} Lundegaard a.s.`;
+// const apiRef = ref => `## API reference
+//  {{#module name="${ref}"}}
+//  {{>docs~}}
+//  {{/module}}`;
 
-const apiRef = ref => `## API reference
- {{#module name="${ref}"}}
- {{>docs~}}
- {{/module}}`;
+const getLayout = ({ ref }) => `{{#module name="${ref}"}}
+ {{>docs}}
+ {{/module}}
+`;
 
-const validations = `# Validations
-This package contains common validation functions
+const validations = getLayout({
+	ref: 'validations',
+});
 
-${apiRef('validations')}
-${footer}`;
+const predicates = getLayout({
+	ref: 'predicates',
+});
 
-const intl = `# Intl
-This package provides translator for react-inl messages. Also convenient API for validations.
-
-${apiRef('intl')}
-${footer}`;
-
-const core = `# Core
-This package contains all core functionalities for Validarium.
-
-${apiRef('core')}
-${footer}`;
-
-const predicates = `# Predicates
-This package contains all predicates used in validation functions.
-Name and usage is self explanatory. If not, please look at the tests.
-
-You can use them for composing custom functionality.
-
-${apiRef('predicates')}
-${footer}`;
+const intl = getLayout({
+	ref: 'intl',
+});
+const core = getLayout({
+	ref: 'core',
+});
 
 const createRecord = (packageName, template) => ({ packageName, template });
 

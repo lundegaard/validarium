@@ -1,6 +1,8 @@
 /**
-@module validations
-*/
+ * This package contains common validation functions
+ *
+ * @module validations
+ */
 export { default as messages } from './messages';
 export { default as hasLengthInInterval } from './hasLengthInInterval';
 export { default as hasOnlyDigits } from './hasOnlyDigits';

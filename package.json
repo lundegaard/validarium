@@ -64,7 +64,8 @@
 		"rollup-plugin-commonjs": "^9.2.1",
 		"rollup-plugin-node-resolve": "^4.0.1",
 		"rollup-plugin-replace": "^2.1.0",
-		"rollup-plugin-terser": "^4.0.4"
+		"rollup-plugin-terser": "^4.0.4",
+		"serve": "^11.3.0"
 	},
 	"scripts": {
 		"publishAll": "yarn build && yarn lerna publish --access public --registry https://registry.npmjs.org/",
@@ -73,9 +74,10 @@
 		"lint": "yarn lint:eslint",
 		"lint:eslint": "eslint --ext .js ./",
 		"build": "lerna exec -- rollup -c=../../rollup.config.js",
-		"prepublish": "yarn build",
+		"prepublish": "yarn build && yarn generate:docs",
 		"generate:docs": "node scripts/generateDocs.js",
-		"generate:plop": "plop --plopfile ./.plop/plopfile.js"
+		"generate:plop": "plop --plopfile ./.plop/plopfile.js",
+		"docs": "yarn serve docs"
 	},
 	"lint-staged": {
 		"linters": {
