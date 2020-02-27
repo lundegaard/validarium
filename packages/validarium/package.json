@@ -1,0 +1,24 @@
+{
+	"version": "0.5.0",
+	"name": "validarium",
+	"license": "MIT",
+	"main": "lib/validarium.js",
+	"module": "es/validarium.js",
+	"unpkg": "dist/validarium.js",
+	"description": "Main functionality of @validarium lays here.",
+	"contributors": [
+		"Tomas Konrady <tomas.konrady@lundegaard.eu>",
+		"Vaclav Jancarik <vaclav.jancarik@lundegaard.eu>",
+		"Kristyna Kamenicka <kristyna.kamenicka@lundegaard.eu>",
+		"Lukas Sulik <lukas.sulik@lundegaard.eu>"
+	],
+	"publishConfig": {
+		"access": "public",
+		"registry": "https://registry.npmjs.org/"
+	},
+	"sideEffects": false,
+	"dependencies": {
+		"@validarium/core": "^0.5.0",
+		"@validarium/validations": "^0.5.0"
+	}
+}

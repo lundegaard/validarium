@@ -10,6 +10,7 @@ const PACKAGE_ROOT_PATH = process.cwd();
 const INPUT_FILE = path.join(PACKAGE_ROOT_PATH, 'src/index.js');
 
 const globals = {
+	validarium: 'Validarium',
 	'@validarium/core': 'ValidariumCore',
 	'@validarium/intl': 'ValidariumIntl',
 	'@validarium/validations': 'ValidariumValidations',
