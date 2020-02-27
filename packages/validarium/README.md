@@ -1,18 +1,54 @@
-# Validarium
+<p align="center">
+  <a href="https://validarium.js.org">
+    <img alt="Validarium" src="https://validarium.js.org/_media/logo.png" width="300" />
+  </a>
+</p>
 
-![MIT License][license-badge]
-[![build status](https://img.shields.io/travis/lundegaard/validarium/master.svg?style=flat-square)](https://travis-ci.org/lundegaard/validarium)
-[![GitHub Stars](https://img.shields.io/github/stars/lundegaard/validarium)](https://github.com/lundegaard/validarium)
-[![Downloads][downloads-badge]][npm]
-[![Version][version-badge]][npm]
+<h1 align="center">
+  <a href="https://lundegaard.eu">
+    <img alt="by Lundegaard" src="https://validarium.js.org/_media/by-lundegaard.png" width="120" />
+  </a>
+</h1>
 
-[downloads-badge]: https://img.shields.io/npm/dm/@validarium/core.svg
-[version-badge]: https://flat.badgen.net/npm/v/@validarium/core
-[license-badge]: https://flat.badgen.net/badge/license/MIT/blue
-[npm]: https://npmjs.com/package/@validarium/core
-An agnostic validation library for JavaScript applications. With optional support for react-intl.
+<h3 align="center">
+🖍️ 🛡  🚀
+</h3>
 
-[`Try It`](https://runkit.com/aizerin/validarium)
+<h3 align="center">
+Validations done right.
+</h3>
+
+<p align="center">
+An agnostic validation library for JavaScript applications with optional built-in support for <a href="https://formatjs.io/">formatjs</a> and <a href="https://github.com/formatjs/react-intl">react-intl</a>.
+</p>
+
+<p align="center">
+Create your validation schema based on priciples of functional programming.
+</p>
+
+<p align="center">
+<a href="https://runkit.com/aizerin/validarium">Try It.</a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/lundegaard/validarium">
+    <img src="https://flat.badgen.net/badge/-/github?icon=github&label" alt="Github" />
+  </a>
+
+   <img src="https://flat.badgen.net/badge/license/MIT/blue" alt="MIT License" />
+
+   <a href="https://travis-ci.org/lundegaard/validarium">
+    <img src="https://img.shields.io/travis/lundegaard/validarium/master.svg?style=flat-square" alt="Travis" />
+  </a>
+
+   <a href="https://npmjs.com/package/validarium">
+    <img src="https://flat.badgen.net/npm/v/@validarium/core" alt="Downloads" />
+  </a>
+
+   <a href="https://npmjs.com/package/validarium">
+    <img src=" https://flat.badgen.net/npm/v/validarium" alt="Version" />
+  </a>
+</p>
 
 ## Features
 
@@ -215,8 +251,8 @@ See [contribution guide](https://github.com/lundegaard/validarium/blob/master/CO
 
 ## See our related projects
 
-* [@redux-tools](https://github.com/lundegaard/redux-tools)
-* [react-union](https://github.com/lundegaard/react-union)
-* [@redux-tools](https://github.com/lundegaard/lundium)
+* [@redux-tools](https://github.com/lundegaard/redux-tools) - Modular Redux is possible!
+* [react-union](https://github.com/lundegaard/react-union) - Intergrate React apps into various CMSs seamlessly.
+* [lundium](https://github.com/lundegaard/lundium) - Beautiful React component library.
 
 © 2018-2020 Lundegaard a.s.

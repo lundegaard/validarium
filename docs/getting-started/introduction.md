@@ -80,6 +80,6 @@ See [contribution guide](contributing) for guidelines.
 
 ## Related projects
 
-* [@redux-tools](https://github.com/lundegaard/redux-tools)
-* [react-union](https://github.com/lundegaard/react-union)
-* [lundium](https://github.com/lundegaard/lundium)
+* [@redux-tools](https://github.com/lundegaard/redux-tools) - Modular Redux is possible!
+* [react-union](https://github.com/lundegaard/react-union) - Intergrate React apps into various CMSs seamlessly.
+* [lundium](https://github.com/lundegaard/lundium) - Beautiful React component library.
