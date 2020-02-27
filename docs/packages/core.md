@@ -1,18 +1,7 @@
-# Core
-This package contains all core functionalities for Validarium.
-
-## API reference
- <a name="module_core"></a>
+<a name="module_core"></a>
 
 # core
 This package contains all core functionalities for Validarium.
-
-
-* [core](#module_core)
-    * [.validate](#module_core.validate)
-    * [.validateMany](#module_core.validateMany)
-    * [.combineValidate(...fns, values)](#module_core.combineValidate) ⇒ <code>Object</code>
-    * [.createValidation(fn, react, params)](#module_core.createValidation) ⇒ <code>Object</code> \| <code>null</code>
 
 
 * * *
@@ -134,8 +123,3 @@ Result is valid if nil or empty is passed. Use required validation if you want t
 ```
 
 * * *
-
-
-[back to main page](../../README.md)
-
-© 2018-2020 Lundegaard a.s.

@@ -1,10 +1,16 @@
 # Validarium
 
+![MIT License][license-badge]
 [![build status](https://img.shields.io/travis/lundegaard/validarium/master.svg?style=flat-square)](https://travis-ci.org/lundegaard/validarium)
+[![GitHub Stars](https://img.shields.io/github/stars/lundegaard/validarium)](https://github.com/lundegaard/validarium)
+[![Downloads][downloads-badge]][npm]
+[![Version][version-badge]][npm]
 
+[downloads-badge]: https://img.shields.io/npm/dm/@validarium/core.svg
+[version-badge]: https://flat.badgen.net/npm/v/@validarium/core
+[license-badge]: https://flat.badgen.net/badge/license/MIT/blue
+[npm]: https://npmjs.com/package/@validarium/core
 An agnostic validation library for JavaScript applications. With optional support for react-intl.
-<br />
-<br />
 
 [`Try It`](https://runkit.com/aizerin/validarium)
 

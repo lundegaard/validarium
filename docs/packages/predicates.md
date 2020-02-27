@@ -1,49 +1,9 @@
-# Predicates
-This package contains all predicates used in validation functions.
-Name and usage is self explanatory. If not, please look at the tests.
-
-You can use them for composing custom functionality.
-
-## API reference
- <a name="module_predicates"></a>
+<a name="module_predicates"></a>
 
 # predicates
 This package contains all predicates used in validation functions. Name and usage is self explanatory. If not, please look at the tests.
 
 You can use them for composing custom functionality.
-
-
-* [predicates](#module_predicates)
-    * [.hasDateMax](#module_predicates.hasDateMax)
-    * [.hasDateMin](#module_predicates.hasDateMin)
-    * [.hasLength](#module_predicates.hasLength)
-    * [.hasLengthMax](#module_predicates.hasLengthMax)
-    * [.hasLengthMin](#module_predicates.hasLengthMin)
-    * [.hasNoSpecialSymbols](#module_predicates.hasNoSpecialSymbols)
-    * [.hasNoWhiteSpace](#module_predicates.hasNoWhiteSpace)
-    * [.hasOnlyDigits](#module_predicates.hasOnlyDigits)
-    * [.hasValueInInterval](#module_predicates.hasValueInInterval)
-    * [.hasValueMax](#module_predicates.hasValueMax)
-    * [.hasValueMin](#module_predicates.hasValueMin)
-    * [.isDivisibleBy](#module_predicates.isDivisibleBy)
-    * [.isEmail](#module_predicates.isEmail)
-    * [.isInteger](#module_predicates.isInteger)
-    * [.isNegativeNumber](#module_predicates.isNegativeNumber)
-    * [.isNumber](#module_predicates.isNumber)
-    * [.isOneOf](#module_predicates.isOneOf)
-    * [.isPhoneNumber](#module_predicates.isPhoneNumber)
-    * [.isPositiveNumber](#module_predicates.isPositiveNumber)
-    * [.isRequired](#module_predicates.isRequired)
-    * [.isString](#module_predicates.isString)
-    * [.isTrimmedLeft](#module_predicates.isTrimmedLeft)
-    * [.isTrimmedRight](#module_predicates.isTrimmedRight)
-    * [.isValidIban](#module_predicates.isValidIban)
-    * [.isTrimmed](#module_predicates.isTrimmed)
-    * [.hasAgeInInterval()](#module_predicates.hasAgeInInterval)
-    * [.hasLengthInterval()](#module_predicates.hasLengthInterval)
-    * [.isNotOneOf()](#module_predicates.isNotOneOf)
-    * [.matches()](#module_predicates.matches)
-    * [.startsWith()](#module_predicates.startsWith)
 
 
 * * *
@@ -227,8 +187,3 @@ You can use them for composing custom functionality.
 ## predicates.startsWith()
 
 * * *
-
-
-[back to main page](../../README.md)
-
-© 2018-2020 Lundegaard a.s.

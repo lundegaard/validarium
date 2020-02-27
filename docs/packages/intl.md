@@ -1,17 +1,7 @@
-# Intl
-This package provides translator for react-inl messages. Also convenient API for validations.
-
-## API reference
- <a name="module_intl"></a>
+<a name="module_intl"></a>
 
 # intl
 This package provides translator for react-inl messages. Also convenient API for validations.
-
-
-* [intl](#module_intl)
-    * [.validateTranslated](#module_intl.validateTranslated) ⇒ <code>Object</code>
-    * [.validateTranslated(intl, ...fns, values)](#module_intl.validateTranslated) ⇒ <code>Object</code>
-    * [.translateResult(intl, result)](#module_intl.translateResult) ⇒ <code>Object</code>
 
 
 * * *
@@ -66,8 +56,3 @@ We assume that `intl` object is from `react-intl` (usually obtained by `injectIn
 
 
 * * *
-
-
-[back to main page](../../README.md)
-
-© 2018-2020 Lundegaard a.s.

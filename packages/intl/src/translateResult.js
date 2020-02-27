@@ -31,9 +31,11 @@ const existFormatMessage = o(isFunction, prop('formatMessage'));
  *
  * @alias module:intl.translateResult
  */
-export const translateResult = intl => result => {
-	invariant(existFormatMessage(intl), 'Function `intl` is required');
-	return o(pickByNotNil, translate(intl.formatMessage))(result);
-};
+export function translateResult(intl) {
+	return result => {
+		invariant(existFormatMessage(intl), 'Function `intl` is required');
+		return o(pickByNotNil, translate(intl.formatMessage))(result);
+	};
+}
 
 export default translateResult;

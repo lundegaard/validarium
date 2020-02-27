@@ -1,47 +1,7 @@
-# Validations
-This package contains common validation functions
-
-## API reference
- <a name="module_validations"></a>
+<a name="module_validations"></a>
 
 # validations
 This package contains common validation functions
-
-
-* [validations](#module_validations)
-    * _number_
-        * [.hasNoWhiteSpace](#module_validations.hasNoWhiteSpace) ⇒ <code>Object</code>
-        * [.isInteger](#module_validations.isInteger) ⇒ <code>Object</code>
-        * [.isNegativeNumber](#module_validations.isNegativeNumber) ⇒ <code>Object</code>
-        * [.isPositiveNumber](#module_validations.isPositiveNumber) ⇒ <code>Object</code>
-        * [.hasAgeInInterval(minAge, maxAge)](#module_validations.hasAgeInInterval) ⇒ <code>Object</code>
-        * [.hasValueInInterval(min, max)](#module_validations.hasValueInInterval) ⇒ <code>Object</code>
-        * [.hasValueMax(max)](#module_validations.hasValueMax) ⇒ <code>Object</code>
-        * [.hasValueMin(min)](#module_validations.hasValueMin) ⇒ <code>Object</code>
-        * [.isDivisibleBy(divisor)](#module_validations.isDivisibleBy) ⇒ <code>Object</code>
-    * _other_
-        * [.isRequired](#module_validations.isRequired) ⇒ <code>Object</code>
-    * _string_
-        * [.hasNoSpecialSymbols](#module_validations.hasNoSpecialSymbols) ⇒ <code>Object</code>
-        * [.hasOnlyDigits](#module_validations.hasOnlyDigits) ⇒ <code>Object</code>
-        * [.isEmail](#module_validations.isEmail) ⇒ <code>Object</code>
-        * [.isNumber](#module_validations.isNumber) ⇒ <code>Object</code>
-        * [.visPhoneNumber](#module_validations.visPhoneNumber) ⇒ <code>Object</code>
-        * [.isString](#module_validations.isString) ⇒ <code>Object</code>
-        * [.isTrimmed](#module_validations.isTrimmed) ⇒ <code>Object</code>
-        * [.isTrimmedLeft](#module_validations.isTrimmedLeft) ⇒ <code>Object</code>
-        * [.isTrimmedRight](#module_validations.isTrimmedRight) ⇒ <code>Object</code>
-        * [.isValidIban](#module_validations.isValidIban) ⇒ <code>Object</code>
-        * [.matches](#module_validations.matches) ⇒ <code>Object</code>
-        * [.hasDateMax(maximalDate)](#module_validations.hasDateMax) ⇒ <code>Object</code>
-        * [.hasDateMin(maximalDate)](#module_validations.hasDateMin) ⇒ <code>Object</code>
-        * [.hasLength(length)](#module_validations.hasLength) ⇒ <code>Object</code>
-        * [.hasLengthInInterval(min, max)](#module_validations.hasLengthInInterval) ⇒ <code>Object</code>
-        * [.hasLengthMax(max)](#module_validations.hasLengthMax) ⇒ <code>Object</code>
-        * [.hasLengthMin(min)](#module_validations.hasLengthMin) ⇒ <code>Object</code>
-        * [.isNumber(list)](#module_validations.isNumber) ⇒ <code>Object</code>
-        * [.isOneOf(list)](#module_validations.isOneOf) ⇒ <code>Object</code>
-        * [.startsWith()](#module_validations.startsWith) ⇒ <code>Object</code>
 
 
 * * *
@@ -703,8 +663,3 @@ null
 ```
 
 * * *
-
-
-[back to main page](../../README.md)
-
-© 2018-2020 Lundegaard a.s.

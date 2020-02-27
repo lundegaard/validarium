@@ -2,6 +2,7 @@ root = true
 
 [*]
 charset = utf-8
+indent_size = 2
 
 [*.js]
 indent_style = tab
@@ -12,4 +13,3 @@ trim_trailing_whitespace = true
 
 [package.json]
 indent_style = space
-indent_size = 2
