@@ -10,3 +10,5 @@
   - [Predicates](/packages/predicates)
   - [Intl](/packages/intl)
 
+- [Contributing](/contributing)
+
