@@ -1,4 +1,4 @@
-# Validarium 
+# Validarium {docsify-ignore-all}
 
 ![MIT License][license-badge]
 [![build status](https://img.shields.io/travis/lundegaard/validarium/master.svg?style=flat-square)](https://travis-ci.org/lundegaard/validarium)
@@ -11,75 +11,58 @@
 [license-badge]: https://flat.badgen.net/badge/license/MIT/blue
 [npm]: https://npmjs.com/package/@validarium/core
 
-[`Try It`](https://runkit.com/aizerin/validarium)
+[Open Validarium in a RunKit sandbox!](https://runkit.com/aizerin/validarium)
 
-## Features
+Platform-agnostic validation library for JavaScript applications with extra focus on composable validations and message translations. Includes (pretty much) out-of-the-box support for both [Redux Form](https://redux-form.com/) and [React Intl](https://github.com/formatjs/react-intl).
 
-This library provides an easy way how to validate your inputs in JavaScript.
-Every validation is optional and null-safe. If you want to make required validations, then please use `isRequired` validation.
+```js
+import { validate, isRequired, isEmail, hasLengthMax, hasValueMin } from 'validarium';
 
-The main package `validarium` exports all functions from both `@validarium/core` and `@validarium/validations`. 
+const validateUserForm = validate({
+	email: [isRequired, isEmail, hasLengthMax(200)],
+	age: [isRequired, isNumber, hasValueMin(18)],
+});
 
-For advanced usage you can use validarium packages separately:
-
-[`@validarium/core`](packages/core)
-
-- contains core functionalities for creating validation definitions.
-
-[`@validarium/predicates`](packages/predicates)
-
-- contains predicates which are can be used separately to define you own validation functions.
-
-[`@validarium/validations`](packages/validations)
-
-- contains validation functions which are composed from predicates and has default message.
-
-[`@validarium/intl`](packages/intl)
-
-- contains translator and convenient validation API for react-intl.
-  <br />
-  <br />
-
-## Installation {docsify-ignore-all}
-
-Install desired packages.
-
-### yarn {docsify-ignore}
-
+validateUserForm({ email: 'something', age: 16 });
+// Returns { email: EmailMessage, age: NumberMessage }
+//
+// EmailMessage is { id: 'validarium.isEmail', defaultMessage: 'Not a valid email format' }
+// NumberMessage is { id: 'validarium.isNumber', defaultMessage: 'Not a number' }
 ```
+
+Every validation is optional and null-safe. If you want to test against `null`, please use the `isRequired` validation.
+
+Of course, validating field arrays, combining multiple validation schemas, and overriding validation messages with custom ones is supported as well.
+
+## Packages
+
+The main package `validarium` exports all the functions you'll need to get started (exported from `@validarium/core` and `@validarium/validations`).
+
+For advanced usage you can use the individual Validarium packages separately:
+
+- [@validarium/core](packages/core), core functionality for creating validation definitions
+- [@validarium/validations](packages/validations), validations: predicates with a default message
+- [@validarium/predicates](packages/predicates), predicates that can be reused to define your own validations
+- [@validarium/intl](packages/intl), utility functions for use with React Intl
+
+## Installation
+
+Use either of these commands based on the package manager you prefer.
+
+```sh
 yarn add validarium
 ```
 
-Additional packages:
-```
-yarn add @validarium/intl @validarium/intl
-```
-
-### npm {docsify-ignore}
-
-```
+```sh
 npm i validarium
 ```
 
-Additional packages:
-
-```
-npm i @validarium/intl @validarium/intl
-```
-
-<br />
-<br />
-
-## Contribution
-
-We are open to any ideas and suggestions! Feel free to make PR!
-
-See [contribution guide](contributing) for guidelines.
-<br />
-<br />
-
 ## Related projects
 
-* [@redux-tools](https://github.com/lundegaard/redux-tools) - Modular Redux is possible!
-* [react-union](https://github.com/lundegaard/react-union) - Intergrate React apps into various CMSs seamlessly.
-* [lundium](https://github.com/lundegaard/lundium) - Beautiful React component library.
+- [@redux-tools](https://github.com/lundegaard/redux-tools) – Maintaining large Redux applications with ease.
+- [react-union](https://github.com/lundegaard/react-union) – Integrate React apps into various CMSs seamlessly.
+- [lundium](https://github.com/lundegaard/lundium) – Beautiful React component library.
+
+## License
+
+All packages are distributed under the MIT license. See the license [here](https://github.com/lundegaard/redux-tools/blob/master/LICENSE).

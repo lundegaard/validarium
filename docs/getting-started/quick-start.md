@@ -1,101 +1,74 @@
-# Quick start
+# Quick Start
 
-<!-- ```jsx
-TODO: is it really necessary to have this example ?
-// Unclean validations definition
-
-export const getValidate = values => {
-	const errors = {};
-	if (!values.email) {
-		errors.email = 'Required';
-	} else if (values.email.length < 200) {
-		errors.username = 'Must be shorter than 200 characters';
-	}
-	if (!values.age) {
-		errors.age = 'Required';
-	} else if (isNaN(Number(values.age))) {
-		errors.age = 'Must be a number';
-	} else if (Number(values.age) < 90) {
-		errors.age = 'Sorry, you must be at least 18 years old';
-	}
-	return errors;
-};
-``` -->
-
-## Library usage
+Here's a quick way to get started with Redux Form and React Intl. The same approach can be used for pretty much any form and i18n library of choice.
 
 ```js
-import {
-	isRequired,
-	isEmail,
-	isString,
-	hasAgeInInterval,
-	hasOnlyDigits,
-	hasDateMin,
-} from '@validarium/validations';
-import { validate, combineValidate, validateMany } from '@validarium/core';
+import React from 'react';
+import { useIntl } from 'react-intl';
+
+import { TextInputPresenter, NumberInputPresenter } from '../formPresenters';
+
+// Write a custom wrapper for your form components.
+const withValidariumError = Component => ({ error, ...otherProps }) => {
+	const intl = useIntl();
+
+	if (!error) {
+		return <Component {...otherProps} />;
+	}
+
+	return <Component {...otherProps} error={intl.formatMessage(error)} />;
+};
+
+export const TextInput = withValidariumError(TextInputPresenter);
+export const NumberInput = withValidariumError(NumberInputPresenter);
 ```
 
-## Simple usage
-
 ```js
-const simpleValidations = validate({
+import React from 'react';
+import { Field, reduxForm } from 'redux-form';
+import { validate, isRequired, isEmail, hasLengthMax, isNumber, hasValueMin } from 'validarium';
+
+import { TextInput, NumberInput } from '../formFields';
+
+// Define your validations.
+const validateUserForm = validate({
 	email: [isRequired, isEmail, hasLengthMax(200)],
 	age: [isRequired, isNumber, hasValueMin(18)],
 });
 
-simpleValidations(valuesToValidate);
+// Create your form presenter.
+const UserFormPresenter = () => (
+	<form>
+		<Field component={TextInput} name="email" />
+		<Field component={NumberInput} name="age" />
+	</form>
+);
+
+// Hook the presenter to Redux Form.
+const UserForm = reduxForm({
+	form: 'user',
+	validate: validateUserForm,
+})(UserFormPresenter);
 ```
 
-## Nested validation object
+Here's how the underlying Redux state might look after user interaction.
 
-```js
-const nestedObject = validate({
-	user: [
-		validate({
-			email: [isRequired],
-		}),
-	],
-});
+```json
+{
+	"form": {
+		"user": {
+			"values": {
+				"age": 20,
+				"email": ""
+			},
+			"errors": {
+				"age": null,
+				"email": {
+					"id": "validarium.isRequired",
+					"defaultMessage": "This field is required"
+				}
+			}
+		}
+	}
+}
 ```
-
-## Nested validation arrays
-
-```js
-const nestedArray = validate({
-	users: [
-		validateMany({
-			email: [isRequired],
-		}),
-	],
-});
-```
-
-## Combine validations
-
-```js
-const isValidUsername = combineValidate(hasNoSpecialSymbols, hasNoWhiteSpace);
-
-const fieldValidations = validate({ username: [isRequired, isValidUsername] });
-
-fieldValidations({ username: ' $ invalid username' });
-```
-
-## Combine multiple validation schemes
-
-```js
-const megaValidator = combineValidate(simpleValidations, nestedArray, nestedObject);
-
-megaValidator(valuesToValidate);
-```
-
-## Usage with intl
-
-```js
-import { translateResult, validateTranslated, combineValidateTranslated } from '@validarium/intl';
-
-translateResult(intl)(fieldValidations(valuesToValidate)); // gives translated result
-validateTranslated(intl, { scheme })(valuesToValidate); // note cannot have nested scheme or be used in combination
-combineValidateTranslated(intl, simpleValidations, nestedArray, nestedObject)(valuesToValidate); // ultimate solution
-```
-
