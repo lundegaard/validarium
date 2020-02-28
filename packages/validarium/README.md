@@ -87,7 +87,7 @@ yarn add validarium
 
 Additional packages:
 ```
-yarn add @validarium/intl @validarium/intl
+yarn add @validarium/intl
 ```
 
 ### npm
@@ -99,7 +99,7 @@ npm i validarium
 Additional packages:
 
 ```
-npm i @validarium/intl @validarium/intl
+npm i @validarium/intl
 ```
 
 <br />
