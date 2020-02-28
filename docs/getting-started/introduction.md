@@ -30,9 +30,12 @@ validateUserForm({ email: 'something', age: 16 });
 // NumberMessage is { id: 'validarium.isNumber', defaultMessage: 'Not a number' }
 ```
 
-Every validation is optional and null-safe. If you want to test against `null`, please use the `isRequired` validation.
+Every validation is optional and null-safe. If you want to test against `null`, please use the `isRequired` validation. Validarium also supports:
 
-Of course, validating field arrays, combining multiple validation schemas, and overriding validation messages with custom ones is supported as well.
+- Validating field arrays.
+- Nested validations.
+- Combining multiple validation schemas.
+- Overriding validation messages with custom ones.
 
 ## Packages
 
