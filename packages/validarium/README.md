@@ -31,6 +31,10 @@ Create your validation schema based on priciples of functional programming.
 </p>
 
 <p align="center">
+<a href="https://validarium.js.org">See our documentation site.</a>
+</p>
+
+<p align="center">
   <a href="https://github.com/lundegaard/validarium">
     <img src="https://flat.badgen.net/badge/-/github?icon=github&label" alt="Github" />
   </a>
