@@ -1,4 +1,4 @@
-<a name="module_core"></a>
+ <a name="module_core"></a>
 
 # core
 This package contains all core functionalities for Validarium.
@@ -123,3 +123,4 @@ Result is valid if nil or empty is passed. Use required validation if you want t
 ```
 
 * * *
+

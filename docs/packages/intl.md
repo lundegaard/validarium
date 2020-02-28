@@ -1,4 +1,4 @@
-<a name="module_intl"></a>
+ <a name="module_intl"></a>
 
 # intl
 This package provides translator for react-inl messages. Also convenient API for validations.
@@ -56,3 +56,4 @@ We assume that `intl` object is from `react-intl` (usually obtained by `injectIn
 
 
 * * *
+
