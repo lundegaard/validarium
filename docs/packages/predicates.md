@@ -1,4 +1,4 @@
-<a name="module_predicates"></a>
+ <a name="module_predicates"></a>
 
 # predicates
 This package contains all predicates used in validation functions. Name and usage is self explanatory. If not, please look at the tests.
@@ -187,3 +187,4 @@ You can use them for composing custom functionality.
 ## predicates.startsWith()
 
 * * *
+
