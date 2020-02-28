@@ -46,7 +46,7 @@ Create your validation schema based on priciples of functional programming.
   </a>
 
    <a href="https://npmjs.com/package/validarium">
-    <img src=" https://flat.badgen.net/npm/v/validarium" alt="Version" />
+    <img src="https://flat.badgen.net/npm/v/validarium" alt="Version" />
   </a>
 </p>
 
