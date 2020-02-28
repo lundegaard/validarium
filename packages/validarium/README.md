@@ -35,14 +35,14 @@ Create your validation schema based on priciples of functional programming.
     <img src="https://flat.badgen.net/badge/-/github?icon=github&label" alt="Github" />
   </a>
 
-   <img src="https://flat.badgen.net/badge/license/MIT/blue" alt="MIT License" />
+  <img src="https://flat.badgen.net/badge/license/MIT/blue" alt="MIT License" />
 
-   <a href="https://travis-ci.org/lundegaard/validarium">
+  <a href="https://travis-ci.org/lundegaard/validarium">
     <img src="https://img.shields.io/travis/lundegaard/validarium/master.svg?style=flat-square" alt="Travis" />
   </a>
 
-   <a href="https://npmjs.com/package/validarium">
-    <img src="https://flat.badgen.net/npm/v/@validarium/core" alt="Downloads" />
+  <a href="https://npmjs.com/package/validarium">
+    <img src="https://img.shields.io/npm/dm/@validarium/core.svg" alt="Downloads" />
   </a>
 
    <a href="https://npmjs.com/package/validarium">
