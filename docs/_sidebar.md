@@ -3,6 +3,10 @@
   - [Introduction](/)
   - [Quick Start](/getting-started/quick-start)
 
+- Examples 
+
+  - [Redux-form & React-intl](/examples/redux-form-intl)
+
 - API Reference
 
   - [Core](/packages/core)
