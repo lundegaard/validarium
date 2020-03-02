@@ -5,7 +5,7 @@
 
 - Examples 
 
-  - [Redux-form & React-intl](/examples/redux-form-intl)
+  - [Redux-form & React-intl](/examples/redux-form-react-intl)
 
 - API Reference
 
