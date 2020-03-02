@@ -58,7 +58,8 @@ export default [
 			globals,
 		},
 		plugins: [
-			autoExternal(),
+			// Bundle all in one file for umd distribution for `validarium` package
+			...(globalName === 'Validarium' ? [] : [autoExternal()]),
 			replace({ 'process.env.NODE_ENV': JSON.stringify('development') }),
 			plugins.nodeResolve,
 			plugins.babel,
@@ -77,7 +78,8 @@ export default [
 			globals,
 		},
 		plugins: [
-			autoExternal(),
+			// Bundle all in one file for umd distribution for `validarium` package
+			...(globalName === 'Validarium' ? [] : [autoExternal()]),
 			replace({ 'process.env.NODE_ENV': JSON.stringify('production') }),
 			plugins.nodeResolve,
 			plugins.babel,

@@ -84,6 +84,22 @@ yarn add validarium
 ```sh
 npm i validarium
 ```
+### CDN
+
+It is possible to use `validarium` to start quickly prototype directly in browser. 
+
+We provide two Universal Module Definition (UMD) bundles:
+
+- development version: [https://unpkg.com/validarium@latest/dist/validarium.js](https://unpkg.com/validarium@latest/dist/validarium.js)
+- production version: [https://unpkg.com/validarium@latest/dist/validarium.min.js](https://unpkg.com/validarium@latest/dist/validarium.js)
+
+⚠️ Using this approach in production is discouraged though - the client has to download the entire library, regardless of which functions are actually used, affecting performance and bandwidth utilization.
+
+## Related projects
+
+- [@redux-tools](https://github.com/lundegaard/redux-tools) – Maintaining large Redux applications with ease.
+- [react-union](https://github.com/lundegaard/react-union) – Integrate React apps into various CMSs seamlessly.
+- [lundium](https://github.com/lundegaard/lundium) – Beautiful React component library.
 
 ## Contributing
 
