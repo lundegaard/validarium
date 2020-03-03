@@ -1,4 +1,4 @@
-import replace from 'rollup-plugin-replace';
+import replace from '@rollup/plugin-replace';
 import autoExternal from 'rollup-plugin-auto-external';
 import path from 'path';
 
@@ -16,7 +16,6 @@ const globals = {
 	'@validarium/validations': 'ValidariumValidations',
 	'@validarium/predicates': 'ValidariumPredicates',
 	invariant: 'invariant',
-	'prop-types': 'PropTypes',
 	ramda: 'R',
 	'ramda-extension': 'R_',
 };

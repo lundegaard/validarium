@@ -1,6 +1,6 @@
-import cjsPlugin from 'rollup-plugin-commonjs';
+import cjsPlugin from '@rollup/plugin-commonjs';
 import { terser as terserPlugin } from 'rollup-plugin-terser';
-import nodeResolvePlugin from 'rollup-plugin-node-resolve';
+import nodeResolvePlugin from '@rollup/plugin-node-resolve';
 import babelPlugin from 'rollup-plugin-babel';
 import path from 'path';
 
@@ -19,9 +19,7 @@ export const terser = terserPlugin({
 	},
 });
 
-export const nodeResolve = nodeResolvePlugin({
-	jsnext: true,
-});
+export const nodeResolve = nodeResolvePlugin();
 
 export const babel = babelPlugin({
 	cwd: LERNA_ROOT_PATH,
