@@ -17,6 +17,18 @@
 		"Kristyna Kamenicka <kristyna.kamenicka@lundegaard.eu>",
 		"Lukas Sulik <lukas.sulik@lundegaard.eu>"
 	],
+	"keywords": [
+		"validator",
+		"validation",
+		"validate",
+		"sanitization",
+		"sanitize",
+		"sanitisation",
+		"sanitise",
+		"assert",
+		"forms",
+		"form"
+	],
 	"dependencies": {
 		"@validarium/core": "^0.6.2",
 		"invariant": "^2.2.4",
