@@ -1,8 +1,5 @@
 {
 	"private": true,
-	"version": "0.1.0",
-	"license": "UNLICENSED",
-	"main": "src/index.js",
 	"description": "Validations with Ramda done right.",
 	"contributors": [
 		"Tomas Konrady <tomas.konrady@lundegaard.eu>",
