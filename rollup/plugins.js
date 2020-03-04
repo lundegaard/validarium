@@ -21,8 +21,10 @@ export const terser = terserPlugin({
 
 export const nodeResolve = nodeResolvePlugin();
 
-export const babel = babelPlugin({
-	cwd: LERNA_ROOT_PATH,
-	runtimeHelpers: true,
-	configFile: path.join(__dirname, './babel.config.js'),
-});
+export const babel = envName =>
+	babelPlugin({
+		cwd: LERNA_ROOT_PATH,
+		runtimeHelpers: true,
+		configFile: path.join(__dirname, './babel.config.js'),
+		envName,
+	});
