@@ -12,6 +12,18 @@
 		"Kristyna Kamenicka <kristyna.kamenicka@lundegaard.eu>",
 		"Lukas Sulik <lukas.sulik@lundegaard.eu>"
 	],
+	"keywords": [
+		"validator",
+		"validation",
+		"validate",
+		"sanitization",
+		"sanitize",
+		"sanitisation",
+		"sanitise",
+		"assert",
+		"forms",
+		"form"
+	],
 	"publishConfig": {
 		"access": "public",
 		"registry": "https://registry.npmjs.org/"

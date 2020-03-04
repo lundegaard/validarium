@@ -16,6 +16,18 @@
 		"access": "public",
 		"registry": "https://registry.npmjs.org/"
 	},
+	"keywords": [
+		"validator",
+		"validation",
+		"validate",
+		"sanitization",
+		"sanitize",
+		"sanitisation",
+		"sanitise",
+		"assert",
+		"forms",
+		"form"
+	],
 	"sideEffects": false,
 	"dependencies": {
 		"@validarium/core": "^0.6.2",

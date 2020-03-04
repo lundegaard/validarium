@@ -13,6 +13,18 @@
 	"engines": {
 		"node": ">=8"
 	},
+	"keywords": [
+		"validator",
+		"validation",
+		"validate",
+		"sanitization",
+		"sanitize",
+		"sanitisation",
+		"sanitise",
+		"assert",
+		"forms",
+		"form"
+	],
 	"workspaces": [
 		"packages/*"
 	],
