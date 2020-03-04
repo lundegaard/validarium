@@ -27,23 +27,25 @@ export default [
 	// CJS
 	{
 		input: INPUT_FILE,
+		external: x => x.includes('ramda'),
 		output: {
 			file: path.join(PACKAGE_ROOT_PATH, 'lib', `${fileName}.js`),
 			format: 'cjs',
 			indent: false,
 		},
-		plugins: [autoExternal(), plugins.nodeResolve, plugins.babel, plugins.cjs],
+		plugins: [autoExternal(), plugins.nodeResolve, plugins.babel('cjs'), plugins.cjs],
 	},
 
 	// ES
 	{
 		input: INPUT_FILE,
+		external: x => x.includes('ramda'),
 		output: {
 			file: path.join(PACKAGE_ROOT_PATH, 'es', `${fileName}.js`),
 			format: 'es',
 			indent: false,
 		},
-		plugins: [autoExternal(), plugins.nodeResolve, plugins.babel, plugins.cjs],
+		plugins: [autoExternal(), plugins.nodeResolve, plugins.babel('es'), plugins.cjs],
 	},
 
 	// UMD Development
@@ -56,12 +58,14 @@ export default [
 			indent: false,
 			globals,
 		},
+		// external: x => x.includes('ramda'),
 		plugins: [
 			// Bundle all in one file for umd distribution for `validarium` package
 			...(globalName === 'Validarium' ? [] : [autoExternal()]),
+			// autoExternal(),
 			replace({ 'process.env.NODE_ENV': JSON.stringify('development') }),
 			plugins.nodeResolve,
-			plugins.babel,
+			plugins.babel('umd'),
 			plugins.cjs,
 		],
 	},
@@ -81,7 +85,7 @@ export default [
 			...(globalName === 'Validarium' ? [] : [autoExternal()]),
 			replace({ 'process.env.NODE_ENV': JSON.stringify('production') }),
 			plugins.nodeResolve,
-			plugins.babel,
+			plugins.babel('umd'),
 			plugins.cjs,
 			plugins.terser,
 		],
