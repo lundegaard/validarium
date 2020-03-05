@@ -84,9 +84,10 @@ yarn add validarium
 ```sh
 npm i validarium
 ```
+
 ### CDN
 
-It is possible to use `validarium` to start quickly prototype directly in browser. 
+It is possible to use `validarium` to start quickly prototype directly in browser.
 
 We provide two Universal Module Definition (UMD) bundles:
 
@@ -106,12 +107,6 @@ We provide two Universal Module Definition (UMD) bundles:
 We are open to all ideas and suggestions, feel free to open an issue or a pull request!
 
 See the [contribution guide](contributing) for guidelines.
-
-## Related projects
-
-- [@redux-tools](https://github.com/lundegaard/redux-tools) – Maintaining large Redux applications with ease.
-- [react-union](https://github.com/lundegaard/react-union) – Integrate React apps into various CMSs seamlessly.
-- [lundium](https://github.com/lundegaard/lundium) – Beautiful React component library.
 
 ## License
 
