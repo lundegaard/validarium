@@ -119,4 +119,8 @@ export default {
 		id: 'validarium.hasNoWhiteSpace',
 		defaultMessage: 'Do not use spaces or tabs',
 	},
+	isRequiredNumber: {
+		id: 'validarium.isRequiredNumber',
+		defaultMessage: 'This field is required',
+	},
 };
