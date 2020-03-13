@@ -5,6 +5,14 @@
 	"main": "lib/validarium-predicates.js",
 	"module": "es/validarium-predicates.js",
 	"unpkg": "dist/validarium-predicates.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/lundegaard/validarium.git",
+		"directory": "packages/predicates"
+	},
+	"bugs": {
+		"url": "https://github.com/lundegaard/validarium/issues"
+	},
 	"publishConfig": {
 		"access": "public",
 		"registry": "https://registry.npmjs.org/"
