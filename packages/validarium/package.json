@@ -1,5 +1,5 @@
 {
-	"version": "0.6.2",
+	"version": "0.7.0",
 	"name": "validarium",
 	"license": "MIT",
 	"main": "lib/validarium.js",
@@ -30,8 +30,8 @@
 	],
 	"sideEffects": false,
 	"dependencies": {
-		"@validarium/core": "^0.6.2",
-		"@validarium/validations": "^0.6.2",
+		"@validarium/core": "^0.7.0",
+		"@validarium/validations": "^0.7.0",
 		"invariant": "^2.2.4",
 		"ramda": "^0.27.0",
 		"ramda-extension": "^0.10.2"
