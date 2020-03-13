@@ -1,5 +1,11 @@
 ## Unreleased
 
+### Fixes
+- [Missing export](https://github.com/lundegaard/validarium/pull/64)
+
+## v0.7.0 - 2020-03-13
+
+### Added
 - [`isRequiredNumber`](https://github.com/lundegaard/validarium/pull/63)
 
 ## v0.6.1 - 2020-03-02
