@@ -75,6 +75,7 @@ This package contains common validation functions
         * [.isDivisibleBy(divisor)](#module_validations.isDivisibleBy) ⇒ <code>Object</code>
     * _other_
         * [.isRequired](#module_validations.isRequired) ⇒ <code>Object</code>
+        * [.isRequiredNumber](#module_validations.isRequiredNumber) ⇒ <code>Object</code>
     * _string_
         * [.hasNoSpecialSymbols](#module_validations.hasNoSpecialSymbols) ⇒ <code>Object</code>
         * [.hasOnlyDigits](#module_validations.hasOnlyDigits) ⇒ <code>Object</code>
@@ -323,6 +324,24 @@ Checks if the value is present
 null
 
 > isRequired(null)
+{message Object}
+```
+
+* * *
+
+<a name="module_validations.isRequiredNumber"></a>
+
+## validations.isRequiredNumber ⇒ <code>Object</code>
+Checks if the value is present
+
+**Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
+**Category**: other  
+**Example**  
+```js
+> isRequiredNumber(0)
+null
+
+> isRequiredNumber(null)
 {message Object}
 ```
 

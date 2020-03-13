@@ -1,5 +1,7 @@
 ## Unreleased
 
+- [`isRequiredNumber`](https://github.com/lundegaard/validarium/pull/63)
+
 ## v0.6.1 - 2020-03-02
 
 ### Added

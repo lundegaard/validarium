@@ -94,6 +94,7 @@ You can use them for composing custom functionality.
     * [.isTrimmedLeft](#module_predicates.isTrimmedLeft)
     * [.isTrimmedRight](#module_predicates.isTrimmedRight)
     * [.isValidIban](#module_predicates.isValidIban)
+    * [.isRequiredNumber](#module_predicates.isRequiredNumber)
     * [.isTrimmed](#module_predicates.isTrimmed)
     * [.hasAgeInInterval()](#module_predicates.hasAgeInInterval)
     * [.hasLengthInterval()](#module_predicates.hasLengthInterval)
@@ -245,6 +246,12 @@ You can use them for composing custom functionality.
 <a name="module_predicates.isValidIban"></a>
 
 ## predicates.isValidIban
+
+* * *
+
+<a name="module_predicates.isRequiredNumber"></a>
+
+## predicates.isRequiredNumber
 
 * * *
 

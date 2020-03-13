@@ -234,6 +234,24 @@ null
 
 * * *
 
+<a name="module_validations.isRequiredNumber"></a>
+
+## validations.isRequiredNumber ⇒ <code>Object</code>
+Checks if the value is present
+
+**Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
+**Category**: other  
+**Example**  
+```js
+> isRequiredNumber(0)
+null
+
+> isRequiredNumber(null)
+{message Object}
+```
+
+* * *
+
 <a name="module_validations.hasNoSpecialSymbols"></a>
 
 ## validations.hasNoSpecialSymbols ⇒ <code>Object</code>

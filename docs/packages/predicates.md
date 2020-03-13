@@ -152,6 +152,12 @@ You can use them for composing custom functionality.
 
 * * *
 
+<a name="module_predicates.isRequiredNumber"></a>
+
+## predicates.isRequiredNumber
+
+* * *
+
 <a name="module_predicates.isTrimmed"></a>
 
 ## predicates.isTrimmed
