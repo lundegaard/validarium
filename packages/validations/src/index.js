@@ -15,6 +15,7 @@ export { default as hasValueInInterval } from './hasValueInInterval';
 export { default as isDivisibleBy } from './isDivisibleBy';
 export { default as isNumber } from './isNumber';
 export { default as isRequired } from './isRequired';
+export { default as isRequiredNumber } from './isRequiredNumber';
 export { default as hasLengthMin } from './hasLengthMin';
 export { default as hasValueMax } from './hasValueMax';
 export { default as isEmail } from './isEmail';
