@@ -5,6 +5,14 @@
 	"main": "lib/validarium-core.js",
 	"module": "es/validarium-core.js",
 	"unpkg": "dist/validarium-core.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/lundegaard/validarium.git",
+		"directory": "packages/core"
+	},
+	"bugs": {
+		"url": "https://github.com/lundegaard/validarium/issues"
+	},
 	"description": "Main functionality of @validarium lays here.",
 	"contributors": [
 		"Tomas Konrady <tomas.konrady@lundegaard.eu>",

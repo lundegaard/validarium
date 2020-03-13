@@ -5,6 +5,14 @@
 	"main": "lib/validarium-validations.js",
 	"module": "es/validarium-validations.js",
 	"unpkg": "dist/validarium-validations.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/lundegaard/validarium.git",
+		"directory": "packages/validations"
+	},
+	"bugs": {
+		"url": "https://github.com/lundegaard/validarium/issues"
+	},
 	"publishConfig": {
 		"access": "public",
 		"registry": "https://registry.npmjs.org/"
