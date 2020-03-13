@@ -21,6 +21,7 @@ export { default as isNumber } from './isNumber';
 export { default as isPhoneNumber } from './isPhoneNumber';
 export { default as isPositiveNumber } from './isPositiveNumber';
 export { default as isRequired } from './isRequired';
+export { default as isRequiredNumber } from './isRequiredNumber';
 export { default as isValidIban } from './isValidIban';
 export { default as startsWith } from './startsWith';
 export { default as hasNoWhiteSpace } from './hasNoWhiteSpace';

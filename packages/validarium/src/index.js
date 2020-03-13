@@ -16,6 +16,7 @@ export {
 	isDivisibleBy,
 	isNumber,
 	isRequired,
+	isRequiredNumber,
 	hasLengthMin,
 	hasValueMax,
 	isEmail,
