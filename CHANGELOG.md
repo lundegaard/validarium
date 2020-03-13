@@ -1,5 +1,6 @@
 ## Unreleased
 
+## v0.7.1-2 - 2020-03-13
 ### Fixes
 - [Missing export](https://github.com/lundegaard/validarium/pull/64)
 
