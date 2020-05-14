@@ -5,7 +5,8 @@
 		"Tomas Konrady <tomas.konrady@lundegaard.eu>",
 		"Vaclav Jancarik <vaclav.jancarik@lundegaard.eu>",
 		"Kristyna Kamenicka <kristyna.kamenicka@lundegaard.eu>",
-		"Lukas Sulik <lukas.sulik@lundegaard.eu>"
+		"Lukas Sulik <lukas.sulik@lundegaard.eu>",
+		"Martin Machacek <martin.machacek@lundegaard.eu>"
 	],
 	"engines": {
 		"node": ">=8"
