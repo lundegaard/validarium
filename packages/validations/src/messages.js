@@ -109,11 +109,11 @@ export default {
 	},
 	hasDateMin: {
 		id: 'validarium.hasDateMin',
-		defaultMessage: 'Value has to be maximally {maxDate}',
+		defaultMessage: 'Date has to be after {min}',
 	},
 	hasDateMax: {
 		id: 'validarium.hasDateMax',
-		defaultMessage: 'Value has to be minimally {minDate}',
+		defaultMessage: 'Date has to be before {max}',
 	},
 	hasNoWhiteSpace: {
 		id: 'validarium.hasNoWhiteSpace',

@@ -19,5 +19,4 @@ null
 
 @alias module:validations.hasDateMax
 */
-export default maximalDate =>
-	createValidation(hasDateMax(maximalDate), m.hasDateMax, { maximalDate });
+export default (max) => createValidation(hasDateMax(max), m.hasDateMax, { max });
