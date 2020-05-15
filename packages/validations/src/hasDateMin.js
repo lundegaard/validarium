@@ -19,5 +19,4 @@ null
 
 @alias module:validations.hasDateMin
 */
-export default maximalDate =>
-	createValidation(hasDateMin(maximalDate), m.hasDateMin, { maximalDate });
+export default (min) => createValidation(hasDateMin(min), m.hasDateMin, { min });
