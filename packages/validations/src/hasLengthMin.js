@@ -19,4 +19,4 @@ null
 
 @alias module:validations.hasLengthMin
 */
-export default min => createValidation(hasLengthMin(min), m.minLength, { min });
+export default min => createValidation(hasLengthMin(min), m.hasLengthMin, { min });

@@ -1,6 +1,3 @@
-// export * from '@validarium/core';
-// export * from '@validarium/validations';
-
 export { combineValidate, validate, validateMany, createValidation } from '@validarium/core';
 
 export {

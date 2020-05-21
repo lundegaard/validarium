@@ -466,7 +466,7 @@ null
 
 <a name="module_validations.hasDateMax"></a>
 
-## validations.hasDateMax(maximalDate) ⇒ <code>Object</code>
+## validations.hasDateMax(max) ⇒ <code>Object</code>
 Checks if the the date is maximally the specified value
 
 **Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
@@ -474,7 +474,7 @@ Checks if the the date is maximally the specified value
 
 | Param | Type | Description |
 | --- | --- | --- |
-| maximalDate | <code>string</code> | maximum date |
+| max | <code>string</code> | maximum date |
 
 **Example**  
 ```js
@@ -492,7 +492,7 @@ null
 
 <a name="module_validations.hasDateMin"></a>
 
-## validations.hasDateMin(maximalDate) ⇒ <code>Object</code>
+## validations.hasDateMin(min) ⇒ <code>Object</code>
 Checks if the the date is minimally the specified value
 
 **Returns**: <code>Object</code> - {message Object} when predicate fails or null when pass  
@@ -500,7 +500,7 @@ Checks if the the date is minimally the specified value
 
 | Param | Type | Description |
 | --- | --- | --- |
-| maximalDate | <code>string</code> | minimal date |
+| min | <code>string</code> | minimal date |
 
 **Example**  
 ```js
