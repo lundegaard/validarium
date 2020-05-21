@@ -1,5 +1,12 @@
 ## Unreleased
 
+## 0.9.0
+- [Fix a missing message](https://github.com/lundegaard/validarium/pull/69)
+- [Improved validation message for dates](https://github.com/lundegaard/validarium/pull/67)
+
+## 0.8.0
+- [Add date validations](https://github.com/lundegaard/validarium/pull/66)
+
 ## v0.7.1-2 - 2020-03-13
 ### Fixes
 - [Missing export](https://github.com/lundegaard/validarium/pull/64)
